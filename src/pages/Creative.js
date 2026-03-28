@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "../components/Container";
 import { Section } from "../components/Section";
 import { Reveal } from "../components/Reveal";
-import { CREATIVE_ITEMS } from "../data/siteContent";
+import { GALLERY_PHOTOS } from "../data/galleryPhotos";
 
 export function Creative() {
   const [active, setActive] = useState(null);
@@ -32,35 +32,54 @@ export function Creative() {
             <p className="eyebrow">Creative</p>
             <h1 className="page-title">Sketches · scribbles · digital</h1>
             <p className="page-lead max-800">
-              Visual thinking outside the IDE—studies, gesture work, and Procreate pieces that keep observation and hand skills sharp alongside engineering.
+              Visual thinking outside the IDE—studies, gesture work, and digital pieces alongside engineering. Scroll sideways to browse the gallery.
             </p>
           </Reveal>
         </Container>
       </Section>
 
-      <Section className="section-tight-top section-bottom">
+      <Section className="section-tight-top section-bottom creative-gallery-section">
         <Container>
-          <div className="gallery-grid">
-            {CREATIVE_ITEMS.map((item, i) => (
-              <Reveal key={item.id} delay={(i % 4) * 0.04}>
-                <motion.button
-                  type="button"
-                  className="gallery-item"
-                  onClick={() => setActive(item)}
-                  whileHover={{ scale: 1.03, y: -4 }}
-                  whileTap={{ scale: 0.98 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 28 }}
-                >
-                  <span className="gallery-item-shine" aria-hidden />
-                  <img src={item.src} alt="" width={400} height={400} loading="lazy" className="gallery-img" />
-                  <div className="gallery-caption">
-                    <span className="gallery-title">{item.title}</span>
-                    <span className="gallery-medium">{item.medium}</span>
-                  </div>
-                </motion.button>
+          {GALLERY_PHOTOS.length === 0 ? (
+            <Reveal>
+              <p className="gallery-empty glass-card">
+                Add PNG, JPG, WebP, or GIF files to{" "}
+                <code className="gallery-empty-code">src/websitephoto</code>
+                —they appear here automatically.
+              </p>
+            </Reveal>
+          ) : (
+            <>
+              <Reveal>
+                <p className="gallery-scroll-hint">Drag or swipe horizontally · 3-row grid</p>
               </Reveal>
-            ))}
-          </div>
+              <div className="gallery-scroller" tabIndex={0} role="region" aria-label="Art gallery, horizontal scroll">
+                <div className="gallery-grid-3row">
+                  {GALLERY_PHOTOS.map((item, i) => (
+                    <motion.button
+                      type="button"
+                      key={item.id}
+                      className="gallery-cell"
+                      onClick={() => setActive(item)}
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-40px", amount: 0.2 }}
+                      transition={{ duration: 0.4, delay: (i % 6) * 0.03 }}
+                      whileHover={{ scale: 1.03, zIndex: 2 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <span className="gallery-item-shine" aria-hidden />
+                      <img src={item.src} alt="" loading="lazy" className="gallery-img" />
+                      <div className="gallery-caption">
+                        <span className="gallery-title">{item.title}</span>
+                        <span className="gallery-medium">{item.medium}</span>
+                      </div>
+                    </motion.button>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
         </Container>
       </Section>
 
@@ -88,11 +107,10 @@ export function Creative() {
                 ×
               </button>
               <div className="modal-body">
-                <img src={active.src} alt="" width={400} height={400} className="modal-img" />
+                <img src={active.src} alt="" className="modal-img" />
                 <div className="modal-meta">
                   <h2>{active.title}</h2>
                   <p className="modal-medium">{active.medium}</p>
-                  <p className="modal-hint">Replace placeholders with your final exports when ready.</p>
                 </div>
               </div>
             </motion.div>

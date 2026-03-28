@@ -4,15 +4,18 @@ import { Section } from "../components/Section";
 import { GlassCard } from "../components/GlassCard";
 import { Reveal, RevealStagger, itemFade } from "../components/Reveal";
 import { ButtonLink } from "../components/ButtonLink";
-import { SITE, HOME_INTRO, SKILLS_PREVIEW, PROJECTS, PLACEHOLDERS } from "../data/siteContent";
+import { SITE, HOME_INTRO, SKILLS_PREVIEW, PROJECTS } from "../data/siteContent";
+import { NeuronBackground } from "../components/NeuronBackground";
+import profilePhoto from "../me/profile.png";
 
 export function Home() {
   const featured = PROJECTS.slice(0, 3);
 
   return (
     <>
-      <Section className="section-hero">
-        <Container>
+      <Section className="section-hero section-hero-neural">
+        <NeuronBackground />
+        <Container className="hero-foreground">
           <div className="hero-grid">
             <div className="hero-copy">
               <Reveal>
@@ -47,8 +50,8 @@ export function Home() {
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               >
                 <img
-                  src={PLACEHOLDERS.profile}
-                  alt=""
+                  src={profilePhoto}
+                  alt={SITE.name}
                   width={300}
                   height={300}
                   className="hero-profile-img"

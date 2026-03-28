@@ -9,7 +9,6 @@ export const SITE = {
 };
 
 export const PLACEHOLDERS = {
-  profile: "https://via.placeholder.com/300x300/0f172a/38bdf8?text=Profile",
   project: "https://via.placeholder.com/600x400/1e293b/38bdf8?text=Project",
   art: "https://via.placeholder.com/400x400/0f172a/64748b?text=Art",
 };
@@ -157,13 +156,3 @@ export const ABOUT = {
   ],
 };
 
-export const CREATIVE_ITEMS = [
-  { id: "1", title: "Urban sketch study", medium: "Sketch", src: `${PLACEHOLDERS.art}&n=1` },
-  { id: "2", title: "Form & line exercise", medium: "Scribble", src: `${PLACEHOLDERS.art}&n=2` },
-  { id: "3", title: "Character gesture", medium: "Digital (Procreate)", src: `${PLACEHOLDERS.art}&n=3` },
-  { id: "4", title: "Light & shadow block-in", medium: "Sketch", src: `${PLACEHOLDERS.art}&n=4` },
-  { id: "5", title: "Abstract rhythm", medium: "Scribble", src: `${PLACEHOLDERS.art}&n=5` },
-  { id: "6", title: "Surface study", medium: "Digital (Procreate)", src: `${PLACEHOLDERS.art}&n=6` },
-  { id: "7", title: "Notebook exploration", medium: "Sketch", src: `${PLACEHOLDERS.art}&n=7` },
-  { id: "8", title: "Mixed mark making", medium: "Scribble", src: `${PLACEHOLDERS.art}&n=8` },
-];
