@@ -338,10 +338,174 @@ button {
 }
 
 .hero-role {
-  font-size: 1.0625rem;
+  font-size: clamp(0.9375rem, 2.4vw, 1.0625rem);
   color: var(--muted);
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   font-weight: 500;
+  line-height: 1.55;
+  max-width: 54ch;
+}
+
+.hero-location {
+  margin: 0 0 16px;
+  font-size: 0.9375rem;
+  color: var(--accent-bright);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.about-location {
+  margin: 0 0 20px;
+  font-size: 0.9375rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.mission-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mission-bullets li {
+  margin: 0;
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(12, 18, 34, 0.55);
+  color: #e2e8f0;
+  line-height: 1.65;
+  position: relative;
+  padding-left: 36px;
+}
+
+.mission-bullets li::before {
+  content: "✔";
+  position: absolute;
+  left: 16px;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.edu-grid {
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 640px) {
+  .edu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.edu-card {
+  padding: 22px 24px;
+  height: 100%;
+}
+
+.edu-school {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--accent-bright);
+}
+
+.edu-degree {
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.edu-period {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.edu-note {
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cert-list li {
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+  background: rgba(12, 18, 34, 0.45);
+  color: #e2e8f0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.about-split {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 700px) {
+  .about-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mini-card {
+  padding: 22px 24px;
+  height: 100%;
+}
+
+.mini-card-title {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+}
+
+.lang-list,
+.honor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lang-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #cbd5e1;
+  font-size: 0.9375rem;
+}
+
+.lang-list strong {
+  color: var(--text);
+}
+
+.lang-list span {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.honor-list li {
+  color: #e2e8f0;
+  padding-left: 14px;
+  border-left: 2px solid rgba(56, 189, 248, 0.35);
+  line-height: 1.5;
 }
 
 .hero-lead {
@@ -781,6 +945,61 @@ button {
   margin-bottom: 6px;
 }
 
+.inline-repo-link {
+  color: var(--accent-bright);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.inline-repo-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+.project-repo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-bottom: 22px;
+}
+
+.project-repo-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-bright);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.project-repo-link:hover {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.project-repo-link.secondary {
+  color: #c4b5fd;
+  border-bottom-color: rgba(167, 139, 250, 0.45);
+}
+
+.project-card-repo {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project-card-repo:hover {
+  text-decoration: underline;
+}
+
+.inline-code {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.9em;
+  color: var(--accent-bright);
+}
+
 /* Experience */
 .role-card {
   padding: 28px 32px;
@@ -887,6 +1106,83 @@ button {
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(148, 163, 184, 0.18);
   color: #cbd5e1;
+}
+
+.tool-chip-sm {
+  padding: 5px 10px;
+  font-size: 0.75rem;
+}
+
+/* Experience timeline */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 8px;
+}
+
+.exp-job-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.exp-job-current {
+  border-color: rgba(56, 189, 248, 0.38);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.1), 0 18px 50px rgba(0, 0, 0, 0.4);
+}
+
+.exp-job-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 24px 26px 18px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  background: rgba(56, 189, 248, 0.04);
+}
+
+.exp-job-role {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--accent-bright);
+}
+
+.exp-job-org {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.exp-job-meta {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.exp-job-body {
+  padding: 20px 26px 24px;
+}
+
+.exp-job-body .label {
+  margin-top: 14px;
+}
+
+.exp-job-body .label:first-child {
+  margin-top: 0;
+}
+
+.exp-job-list {
+  margin-top: 8px;
+}
+
+.exp-job-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 /* Gallery */
@@ -1226,6 +1522,49 @@ button {
   border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
 
+.contact-card-wide .contact-grid-3 {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .contact-card-wide .contact-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-portfolio-block {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.contact-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-link-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-link-inline {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.contact-url-muted {
+  font-size: 0.8125rem;
+  color: var(--muted-2);
+  word-break: break-all;
+}
+
 /* Footer */
 .footer {
   border-top: 1px solid rgba(148, 163, 184, 0.12);
@@ -1260,6 +1599,12 @@ button {
   margin: 0;
   font-size: 0.875rem;
   color: var(--muted);
+}
+
+.footer-loc {
+  margin: 8px 0 0;
+  font-size: 0.8125rem;
+  color: var(--muted-2);
 }
 
 .footer-links {

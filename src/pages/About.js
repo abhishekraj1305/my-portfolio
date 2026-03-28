@@ -3,7 +3,7 @@ import { Section } from "../components/Section";
 import { Reveal, RevealStagger, itemFade } from "../components/Reveal";
 import { GlassCard } from "../components/GlassCard";
 import { motion } from "framer-motion";
-import { ABOUT } from "../data/siteContent";
+import { ABOUT, EDUCATION, CERTIFICATIONS, LANGUAGES, HONORS, SITE } from "../data/siteContent";
 
 export function About() {
   return (
@@ -13,9 +13,42 @@ export function About() {
           <Reveal>
             <p className="eyebrow">About</p>
             <h1 className="page-title">Professional summary</h1>
+            <p className="about-location">{SITE.location}</p>
             <p className="page-lead max-800">{ABOUT.summary}</p>
             <p className="page-note max-800">{ABOUT.vision}</p>
           </Reveal>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Reveal>
+            <h2 className="section-title">Core strengths</h2>
+            <p className="section-lead max-720">Where I spend depth—not buzzwords for their own sake.</p>
+          </Reveal>
+          <ul className="mission-bullets">
+            {ABOUT.missionBullets.map((line) => (
+              <Reveal key={line}>
+                <li>{line}</li>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
+      </Section>
+
+      <Section className="section-tight-top">
+        <Container>
+          <Reveal>
+            <h2 className="section-title">Highlighted outcomes</h2>
+            <p className="section-lead max-720">Selected narrative anchors—details live on Projects & Experience.</p>
+          </Reveal>
+          <ul className="philosophy-list">
+            {ABOUT.achievementsHighlight.map((line, i) => (
+              <Reveal key={line} delay={i * 0.04}>
+                <li>{line}</li>
+              </Reveal>
+            ))}
+          </ul>
         </Container>
       </Section>
 
@@ -44,9 +77,7 @@ export function About() {
         <Container>
           <Reveal>
             <h2 className="section-title">What I do</h2>
-            <p className="section-lead max-720">
-              Three lenses I use when engaging stakeholders—so automation sticks after launch week.
-            </p>
+            <p className="section-lead max-720">Practical lenses for delivery with stakeholders.</p>
           </Reveal>
           <RevealStagger className="grid-pillars">
             {ABOUT.pillars.map((pillar) => (
@@ -58,6 +89,71 @@ export function About() {
               </motion.div>
             ))}
           </RevealStagger>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Reveal>
+            <h2 className="section-title">Education</h2>
+          </Reveal>
+          <div className="edu-grid">
+            {EDUCATION.map((e) => (
+              <Reveal key={e.degree + e.period}>
+                <GlassCard className="edu-card">
+                  <h3 className="edu-school">{e.school}</h3>
+                  <p className="edu-degree">{e.degree}</p>
+                  <p className="edu-period">{e.period}</p>
+                  {e.note ? <p className="edu-note">{e.note}</p> : null}
+                </GlassCard>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Reveal>
+            <h2 className="section-title">Certifications</h2>
+          </Reveal>
+          <ul className="cert-list">
+            {CERTIFICATIONS.map((c) => (
+              <Reveal key={c}>
+                <li>{c}</li>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <div className="about-split">
+            <Reveal>
+              <GlassCard className="mini-card">
+                <h3 className="mini-card-title">Languages</h3>
+                <ul className="lang-list">
+                  {LANGUAGES.map((l) => (
+                    <li key={l.name}>
+                      <strong>{l.name}</strong>
+                      <span>{l.level}</span>
+                    </li>
+                  ))}
+                </ul>
+              </GlassCard>
+            </Reveal>
+            <Reveal delay={0.06}>
+              <GlassCard className="mini-card">
+                <h3 className="mini-card-title">Honors & awards</h3>
+                <ul className="honor-list">
+                  {HONORS.map((h) => (
+                    <li key={h}>{h}</li>
+                  ))}
+                </ul>
+              </GlassCard>
+            </Reveal>
+          </div>
         </Container>
       </Section>
 

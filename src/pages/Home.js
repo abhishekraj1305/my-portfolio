@@ -9,7 +9,7 @@ import { NeuronBackground } from "../components/NeuronBackground";
 import profilePhoto from "../me/profile.png";
 
 export function Home() {
-  const featured = PROJECTS.slice(0, 3);
+  const featured = PROJECTS.filter((p) => p.highlight);
 
   return (
     <>
@@ -28,7 +28,8 @@ export function Home() {
                 </h1>
               </Reveal>
               <Reveal delay={0.12}>
-                <p className="hero-role">{SITE.title}</p>
+                <p className="hero-role">{SITE.titleFull}</p>
+                <p className="hero-location">{SITE.location}</p>
               </Reveal>
               <Reveal delay={0.18}>
                 <p className="hero-lead">{SITE.tagline}</p>
@@ -91,6 +92,11 @@ export function Home() {
                   <div className="project-card-body">
                     <h3>{p.title}</h3>
                     <p>{p.summary}</p>
+                    {p.repoUrl ? (
+                      <a className="project-card-repo" href={p.repoUrl} target="_blank" rel="noreferrer">
+                        GitHub →
+                      </a>
+                    ) : null}
                   </div>
                 </GlassCard>
               </Reveal>

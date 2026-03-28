@@ -2,7 +2,7 @@ import { Container } from "../components/Container";
 import { Section } from "../components/Section";
 import { Reveal } from "../components/Reveal";
 import { GlassCard } from "../components/GlassCard";
-import { PROJECTS } from "../data/siteContent";
+import { PROJECTS, GITHUB_USER } from "../data/siteContent";
 
 export function Projects() {
   return (
@@ -11,19 +11,24 @@ export function Projects() {
         <Container>
           <Reveal>
             <p className="eyebrow">Projects</p>
-            <h1 className="page-title">Systems, not slide decks</h1>
+            <h1 className="page-title">Public GitHub portfolio</h1>
             <p className="page-lead max-800">
-              Each engagement below maps a business friction to an engineered outcome: clearer state, fewer manual hops, and reporting people trust.
+              Each card maps to a real repository on{" "}
+              <a href={`${GITHUB_USER}?tab=repositories`} className="inline-repo-link" target="_blank" rel="noreferrer">
+                github.com/abhishekraj1305
+              </a>
+              . Cover art is{" "}
+              <strong>AI-generated from prompts</strong> (Pollinations) for a unified futuristic look—swap for repo screenshots anytime.
             </p>
           </Reveal>
         </Container>
       </Section>
 
-      <Section className="section-tight-top">
+      <Section className="section-tight-top section-bottom">
         <Container>
           <div className="projects-stack">
             {PROJECTS.map((p, i) => (
-              <Reveal key={p.slug} delay={i * 0.04}>
+              <Reveal key={p.slug} delay={i * 0.03}>
                 <GlassCard className="project-detail-card">
                   <div className="project-detail-grid">
                     <div className="project-detail-media">
@@ -32,6 +37,16 @@ export function Projects() {
                     <div className="project-detail-copy">
                       <h2>{p.title}</h2>
                       <p className="project-tagline">{p.summary}</p>
+                      <div className="project-repo-row">
+                        <a className="project-repo-link" href={p.repoUrl} target="_blank" rel="noreferrer">
+                          Open repository →
+                        </a>
+                        {p.extraRepos?.map((ex) => (
+                          <a key={ex.url} className="project-repo-link secondary" href={ex.url} target="_blank" rel="noreferrer">
+                            {ex.label} →
+                          </a>
+                        ))}
+                      </div>
                       <div className="project-block">
                         <span className="label">Problem</span>
                         <p>{p.problem}</p>

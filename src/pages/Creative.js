@@ -1,11 +1,12 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "../components/Container";
 import { Section } from "../components/Section";
 import { Reveal } from "../components/Reveal";
-import { GALLERY_PHOTOS } from "../data/galleryPhotos";
+import { getCreativeGalleryItems } from "../data/creativeGallery";
 
 export function Creative() {
+  const items = useMemo(() => getCreativeGalleryItems(), []);
   const [active, setActive] = useState(null);
 
   const close = useCallback(() => setActive(null), []);
@@ -30,9 +31,10 @@ export function Creative() {
         <Container>
           <Reveal>
             <p className="eyebrow">Creative</p>
-            <h1 className="page-title">Sketches · scribbles · digital</h1>
+            <h1 className="page-title">Sketches · uploads · AI tiles</h1>
             <p className="page-lead max-800">
-              Visual thinking outside the IDE—studies, gesture work, and digital pieces alongside engineering. Scroll sideways to browse the gallery.
+              Your files from <code className="gallery-empty-code inline-code">src/websitephoto</code> appear first; additional{" "}
+              <strong>AI-generated</strong> pieces extend the grid for a full neon gallery. Scroll sideways—three rows.
             </p>
           </Reveal>
         </Container>
@@ -40,46 +42,34 @@ export function Creative() {
 
       <Section className="section-tight-top section-bottom creative-gallery-section">
         <Container>
-          {GALLERY_PHOTOS.length === 0 ? (
-            <Reveal>
-              <p className="gallery-empty glass-card">
-                Add PNG, JPG, WebP, or GIF files to{" "}
-                <code className="gallery-empty-code">src/websitephoto</code>
-                —they appear here automatically.
-              </p>
-            </Reveal>
-          ) : (
-            <>
-              <Reveal>
-                <p className="gallery-scroll-hint">Drag or swipe horizontally · 3-row grid</p>
-              </Reveal>
-              <div className="gallery-scroller" tabIndex={0} role="region" aria-label="Art gallery, horizontal scroll">
-                <div className="gallery-grid-3row">
-                  {GALLERY_PHOTOS.map((item, i) => (
-                    <motion.button
-                      type="button"
-                      key={item.id}
-                      className="gallery-cell"
-                      onClick={() => setActive(item)}
-                      initial={{ opacity: 0, y: 16 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-40px", amount: 0.2 }}
-                      transition={{ duration: 0.4, delay: (i % 6) * 0.03 }}
-                      whileHover={{ scale: 1.03, zIndex: 2 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <span className="gallery-item-shine" aria-hidden />
-                      <img src={item.src} alt="" loading="lazy" className="gallery-img" />
-                      <div className="gallery-caption">
-                        <span className="gallery-title">{item.title}</span>
-                        <span className="gallery-medium">{item.medium}</span>
-                      </div>
-                    </motion.button>
-                  ))}
-                </div>
-              </div>
-            </>
-          )}
+          <Reveal>
+            <p className="gallery-scroll-hint">Drag or swipe horizontally · 3-row grid</p>
+          </Reveal>
+          <div className="gallery-scroller" tabIndex={0} role="region" aria-label="Art gallery, horizontal scroll">
+            <div className="gallery-grid-3row">
+              {items.map((item, i) => (
+                <motion.button
+                  type="button"
+                  key={item.id}
+                  className="gallery-cell"
+                  onClick={() => setActive(item)}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px", amount: 0.2 }}
+                  transition={{ duration: 0.4, delay: (i % 6) * 0.03 }}
+                  whileHover={{ scale: 1.03, zIndex: 2 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="gallery-item-shine" aria-hidden />
+                  <img src={item.src} alt="" loading="lazy" className="gallery-img" />
+                  <div className="gallery-caption">
+                    <span className="gallery-title">{item.title}</span>
+                    <span className="gallery-medium">{item.medium}</span>
+                  </div>
+                </motion.button>
+              ))}
+            </div>
+          </div>
         </Container>
       </Section>
 
