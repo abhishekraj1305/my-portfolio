@@ -17,8 +17,7 @@ export function Projects() {
               <a href={`${GITHUB_USER}?tab=repositories`} className="inline-repo-link" target="_blank" rel="noreferrer">
                 github.com/abhishekraj1305
               </a>
-              . Cover art is{" "}
-              <strong>AI-generated from prompts</strong> (Pollinations) for a unified futuristic look—swap for repo screenshots anytime.
+              .
             </p>
           </Reveal>
         </Container>

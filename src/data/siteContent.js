@@ -1,5 +1,3 @@
-import { aiImage } from "./aiImage";
-
 /** Site & contact — primary source of truth for copy */
 export const GITHUB_USER = "https://github.com/abhishekraj1305";
 
@@ -27,14 +25,14 @@ export const LINKS = {
 };
 
 export const CONTACT = {
-  phoneTel: "tel:+916201270892",
-  phoneDisplay: "+91 6201270892",
+  phoneTel: "tel:+91 7261078212",
+  phoneDisplay: "+91 7261078212",
   school: "SLIET Longowal",
 };
 
 export const HOME_INTRO = {
   short:
-    "Data Scientist and AI/ML engineer grounded in digital transformation—from SQL and Python automation on Azure to Power Platform, BI, and GenAI. Alumnus and placement representative at SLIET Longowal; based in Gurugram. Public code and experiments live on GitHub; portfolio imagery below uses prompt-based AI renders for a consistent neon tech aesthetic.",
+    "Data Scientist and AI/ML engineer grounded in digital transformation—from SQL and Python automation on Azure to Power Platform, BI, and GenAI. Alumnus and placement representative at SLIET Longowal; based in Gurugram. Public code and experiments live on GitHub.",
 };
 
 export const SKILLS_PREVIEW = [
@@ -48,7 +46,7 @@ export const SKILLS_PREVIEW = [
   "Git & collaborative engineering",
 ];
 
-/** Mapped to public repos — see https://github.com/abhishekraj1305?tab=repositories • Images: AI-generated (Pollinations). */
+/** Mapped to public repos — see https://github.com/abhishekraj1305?tab=repositories */
 export const PROJECTS = [
   {
     slug: "binance-futures-bot",
@@ -65,7 +63,8 @@ export const PROJECTS = [
       "Reusable foundation for experimentation and demos; sharpens production habits around logging, validation, and API hygiene.",
     stack: ["Python", "Streamlit", "Binance futures API", "HMAC auth", "CLI patterns"],
     features: ["Streamlit dashboard", "Order-type coverage", "Logging & validation-first design"],
-    image: aiImage("cryptocurrency trading terminal holographic charts futuristic bot interface", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1641932781181-c5c55b2b6575?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "mlops-pipeline",
@@ -82,7 +81,8 @@ export const PROJECTS = [
       "Clear pattern for turning one-off experiments into something another engineer can re-run and compare.",
     stack: ["Python", "Logging", "Metrics & artifacts", "Reproducibility"],
     features: ["Structured outputs", "Deployment-oriented layout", "Teaching-friendly scope"],
-    image: aiImage("MLOps pipeline data flow machine learning cicd abstract diagram", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "ocr-react",
@@ -99,7 +99,8 @@ export const PROJECTS = [
       "End-to-end story from pixels to actionable rows—closer to how document AI products are shaped in practice.",
     stack: ["Python", "OpenCV", "OCR", "React", "Vite", "CSV export"],
     features: ["Document capture to fields", "Dashboard review UX", "Export for downstream systems"],
-    image: aiImage("document OCR scanning invoices holographic data extraction dashboard", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "nlp-zomato-ratings",
@@ -116,7 +117,8 @@ export const PROJECTS = [
       "Demonstrates end-to-end NLP from raw text to metric—not only exploratory EDA—with reproducible project structure.",
     stack: ["Python", "Jupyter", "NLP", "Scikit-learn"],
     features: ["Text → rating mapping", "Larger-than-toy dataset", "Documented accuracy claims"],
-    image: aiImage("restaurant reviews word cloud neural NLP sentiment analysis abstract", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "realtime-object-detection",
@@ -132,7 +134,8 @@ export const PROJECTS = [
       "Speeds demos and classroom-style reviews without a heavy custom front end.",
     stack: ["Python", "Streamlit", "Computer vision", "Object detection"],
     features: ["Live-ish UI", "Detection loop", "Shareable runnable app"],
-    image: aiImage("real time object detection bounding boxes camera feed cyber interface", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "fraud-detection-ml",
@@ -149,7 +152,8 @@ export const PROJECTS = [
       "Portfolio-grade evidence of tabular + risk-style thinking alongside classic ML reporting.",
     stack: ["Python", "Jupyter", "Classification", "Imbalanced learning mindset"],
     features: ["Risk framing", "Feature + model iteration", "Second related repo for breadth"],
-    image: aiImage("fraud detection cybersecurity shield neural network banking abstract", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "banking-analytics",
@@ -165,7 +169,8 @@ export const PROJECTS = [
       "Shows SQL/Python/BI-style storytelling on realistic financial shape—not generic toy CSVs only.",
     stack: ["Python", "Pandas", "Data visualization", "Financial domain"],
     features: ["ETL-style prep", "Banking context", "Presentation-ready cuts"],
-    image: aiImage("banking analytics charts dashboards holographic finance data", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "power-bi-visualization",
@@ -181,7 +186,8 @@ export const PROJECTS = [
       "Demonstrates BI literacy alongside code-first analytics.",
     stack: ["Power BI", "Python", "Jupyter", "Data storytelling"],
     features: ["Dashboard samples", "BI + notebook pairing", "Portfolio-ready narratives"],
-    image: aiImage("Power BI dashboard neon charts executive analytics room", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "real-estate-scraping",
@@ -198,7 +204,8 @@ export const PROJECTS = [
       "Pairs with broader narrative on automation-led revenue and coverage (see experience summary).",
     stack: ["Python", "Web scraping", "HTML parsing", "Data cleaning"],
     features: ["Multi-site pattern", "Domain-specific selectors", "Companion Sobha Bengaluru scraper"],
-    image: aiImage("real estate skyscrapers data network property tech wireframe", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "train-sideview",
@@ -214,7 +221,8 @@ export const PROJECTS = [
       "Shows attention to dataset integrity, not only model code.",
     stack: ["Python", "HTML report", "Computer vision data prep"],
     features: ["Coach-centric crops", "Coverage reporting", "Operations-minded QA"],
-    image: aiImage("train railway side view technical diagram futuristic measurement", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "hand-detection",
@@ -230,7 +238,8 @@ export const PROJECTS = [
       "Demonstrates perception + interaction design in a small, understandable codebase.",
     stack: ["Python", "MediaPipe / CV patterns", "Video"],
     features: ["Gesture → control mapping", "Interactive demo angle", "CV fundamentals"],
-    image: aiImage("hand gesture recognition holographic interface controlling video", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "ml-projects-notebooks",
@@ -246,7 +255,8 @@ export const PROJECTS = [
       "Shows breadth of ML baselines and teaching-grade clarity.",
     stack: ["Python", "Jupyter", "Scikit-learn", "Classic ML"],
     features: ["Multiple problem types", "Notebook-native pedagogy", "Portfolio density"],
-    image: aiImage("machine learning notebooks scatter plots neural grid education", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1526379095098-9b1f56dbfcb6?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "data-science-modules",
@@ -262,7 +272,8 @@ export const PROJECTS = [
       "Best read as a personal academy-in-code—signals seriousness about foundations.",
     stack: ["Python", "HTML docs", "Data science lifecycle"],
     features: ["Modular layout", "Learning-oriented", "Broad coverage"],
-    image: aiImage("data science learning path books code holographic library", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "data-analysis-projects",
@@ -278,7 +289,8 @@ export const PROJECTS = [
       "Complements Power BI-focused repo with code-first viz and pandas workflows.",
     stack: ["Python", "Jupyter", "Visualization", "Pandas"],
     features: ["Many slices", "EDA patterns", "Viz grammar practice"],
-    image: aiImage("data visualization many charts holographic analyst workspace", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "abhishek-portfolio-ts",
@@ -294,7 +306,8 @@ export const PROJECTS = [
       "Shows continued investment in developer experience and shipping a public face, not only notebooks.",
     stack: ["TypeScript", "Front-end tooling"],
     features: ["Historical portfolio variant", "TS-based setup"],
-    image: aiImage("developer portfolio website holographic typescript code", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "portfolio-legacy",
@@ -310,7 +323,8 @@ export const PROJECTS = [
       "Demonstrates long-term public versioning of your personal brand.",
     stack: ["Legacy web assets"],
     features: ["Archival value", "Progression narrative"],
-    image: aiImage("archive folder timeline glowing portfolio evolution", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=70",
   },
   {
     slug: "python-exercises",
@@ -326,7 +340,8 @@ export const PROJECTS = [
       "Signals discipline: the boring reps that make hard projects tractable.",
     stack: ["Python"],
     features: ["Core syntax", "Problem sets", "Interview-ready muscle memory"],
-    image: aiImage("python snake logo abstract code keyboard neon", 600, 400),
+    image:
+      "https://images.unsplash.com/photo-1526378722454-3b7d8c4d26f4?auto=format&fit=crop&w=1200&q=70",
   },
 ];
 

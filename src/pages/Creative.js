@@ -31,10 +31,9 @@ export function Creative() {
         <Container>
           <Reveal>
             <p className="eyebrow">Creative</p>
-            <h1 className="page-title">Sketches · uploads · AI tiles</h1>
+            <h1 className="page-title">Sketches · uploads</h1>
             <p className="page-lead max-800">
-              Your files from <code className="gallery-empty-code inline-code">src/websitephoto</code> appear first; additional{" "}
-              <strong>AI-generated</strong> pieces extend the grid for a full neon gallery. Scroll sideways—three rows.
+              Your files from <code className="gallery-empty-code inline-code">src/websitephoto</code> appear first. Scroll sideways—three rows.
             </p>
           </Reveal>
         </Container>
