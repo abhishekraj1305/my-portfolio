@@ -4,11 +4,11 @@ export const GITHUB_USER = "https://github.com/abhishekraj1305";
 export const SITE = {
   name: "Abhishek Raj",
   title:
-    "Data Scientist · AI/ML Engineer · GenAI & LLMs · Python & SQL · Digital Transformation · Automation & Analytics",
+    "Data Scientist · Automation Developer · Power Platform Expert · Python Developer",
   titleFull:
-    "Data Scientist | AI & ML Engineer | GenAI & LLMs | Python & SQL Expert | Digital Transformation Specialist | Automation & Analytics Enthusiast | Artist",
+    "Data Scientist | Automation Developer | Power Platform Expert | Python Developer | Digital Transformation Executive",
   tagline:
-    "I turn raw data into actionable systems—ML, automation, and cloud-backed workflows that make businesses faster and more human-friendly.",
+    "I design data-driven automation systems that turn messy operations into clean dashboards, governed workflows, and measurable enterprise outcomes.",
   linkedIn: "https://www.linkedin.com/in/abhishekraj1305/",
   email: "mailto:r.abhishek1305@gmail.com",
   emailDisplay: "r.abhishek1305@gmail.com",
@@ -32,18 +32,80 @@ export const CONTACT = {
 
 export const HOME_INTRO = {
   short:
-    "Data Scientist and AI/ML engineer grounded in digital transformation—from SQL and Python automation on Azure to Power Platform, BI, and GenAI. Alumnus and placement representative at SLIET Longowal; based in Gurugram. Public code and experiments live on GitHub.",
+    "Data Scientist and automation developer focused on enterprise digitization: Python pipelines, SQL-backed reporting, Power Apps, Power Automate, SharePoint/M365 workflows, Microsoft Graph API integrations, dashboards, and AI-assisted data products. Based in Gurugram with public code and experiments on GitHub.",
 };
 
+function projectVisual(prompt) {
+  const key = prompt.toLowerCase();
+  const kind = key.includes("trading") || key.includes("cryptocurrency")
+    ? "trading"
+    : key.includes("ocr") || key.includes("invoice") || key.includes("document")
+      ? "ocr"
+      : key.includes("object") || key.includes("vision") || key.includes("gesture") || key.includes("train")
+        ? "vision"
+        : key.includes("fraud") || key.includes("banking") || key.includes("finance") || key.includes("power bi") || key.includes("dashboard") || key.includes("analytics")
+          ? "dashboard"
+          : key.includes("typescript") || key.includes("frontend") || key.includes("portfolio")
+            ? "frontend"
+            : key.includes("scraping") || key.includes("python")
+              ? "code"
+              : "ml";
+
+  const icons = {
+    trading: `<path d="M168 612C320 432 420 518 552 352C672 202 790 250 1032 110" stroke="#00CAEB" stroke-width="18" stroke-linecap="round"/><path d="M168 672C340 572 482 628 622 512C760 398 870 464 1050 330" stroke="#DF3F8B" stroke-width="16" stroke-linecap="round"/><path d="M760 176L890 306L760 436L630 306L760 176Z" fill="#DF3F8B"/><path d="M760 176L826 306L760 436L694 306L760 176Z" fill="#9AF7FF"/><circle cx="168" cy="612" r="24" fill="#9AF7FF"/><circle cx="552" cy="352" r="24" fill="#00CAEB"/><circle cx="1032" cy="110" r="24" fill="#DF3F8B"/>`,
+    ml: `<path d="M600 138L846 280V520L600 662L354 520V280L600 138Z" fill="#020617" fill-opacity=".72" stroke="#9AF7FF" stroke-width="9"/><path d="M600 138V662M354 280L846 520M846 280L354 520" stroke="#00CAEB" stroke-opacity=".58" stroke-width="7"/><circle cx="600" cy="400" r="102" fill="#00CAEB"/><circle cx="600" cy="400" r="48" fill="#DFFBFF"/><circle cx="354" cy="280" r="18" fill="#DF3F8B"/><circle cx="846" cy="520" r="18" fill="#DF3F8B"/>`,
+    ocr: `<rect x="230" y="118" width="350" height="500" rx="30" fill="#E9FBFF" fill-opacity=".92"/><path d="M292 220H520M292 298H490M292 376H536M292 454H460" stroke="#060885" stroke-width="20" stroke-linecap="round"/><rect x="640" y="232" width="300" height="360" rx="32" fill="#020617" stroke="#00CAEB" stroke-width="8"/><path d="M700 326H880M700 410H840M700 494H900" stroke="#DF3F8B" stroke-width="18" stroke-linecap="round"/><path d="M596 394H640" stroke="#9AF7FF" stroke-width="10" stroke-linecap="round"/>`,
+    vision: `<circle cx="610" cy="396" r="278" fill="#00CAEB" fill-opacity=".12" stroke="#00CAEB" stroke-width="8"/><path d="M176 400C320 200 506 122 610 122C714 122 900 200 1044 400C900 600 714 678 610 678C506 678 320 600 176 400Z" fill="#020617" fill-opacity=".62" stroke="#9AF7FF" stroke-width="9"/><circle cx="610" cy="400" r="124" fill="#00CAEB"/><circle cx="610" cy="400" r="62" fill="#060885"/><circle cx="654" cy="358" r="24" fill="#DF3F8B"/>`,
+    dashboard: `<rect x="120" y="112" width="960" height="560" rx="46" fill="#020617" fill-opacity=".62" stroke="#00CAEB" stroke-width="7"/><rect x="210" y="206" width="230" height="160" rx="26" fill="#00CAEB" fill-opacity=".24" stroke="#00CAEB" stroke-width="5"/><rect x="494" y="206" width="230" height="160" rx="26" fill="#DF3F8B" fill-opacity=".24" stroke="#DF3F8B" stroke-width="5"/><rect x="778" y="206" width="230" height="160" rx="26" fill="#9AF7FF" fill-opacity=".18" stroke="#9AF7FF" stroke-width="5"/><path d="M214 566C360 426 458 494 594 374C720 264 826 368 1004 214" stroke="#9AF7FF" stroke-width="14" stroke-linecap="round"/><circle cx="594" cy="374" r="22" fill="#00CAEB"/><circle cx="1004" cy="214" r="22" fill="#DF3F8B"/>`,
+    code: `<rect x="132" y="110" width="560" height="580" rx="34" fill="#020617" fill-opacity=".8" stroke="#00CAEB" stroke-width="6"/><circle cx="190" cy="166" r="13" fill="#DF3F8B"/><circle cx="232" cy="166" r="13" fill="#00CAEB"/><circle cx="274" cy="166" r="13" fill="#9AF7FF"/><path d="M196 260H530M196 332H610M196 404H450M196 476H580M196 548H628M196 620H490" stroke="#9AF7FF" stroke-width="20" stroke-linecap="round"/><path d="M196 332H350M196 476H392M196 620H318" stroke="#DF3F8B" stroke-width="20" stroke-linecap="round"/><path d="M790 250L1020 400L790 550" stroke="#00CAEB" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/><path d="M1020 250L790 400L1020 550" stroke="#DF3F8B" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>`,
+    frontend: `<rect x="176" y="130" width="848" height="520" rx="44" fill="#020617" fill-opacity=".7" stroke="#00CAEB" stroke-width="7"/><rect x="250" y="222" width="360" height="300" rx="28" fill="#00CAEB" fill-opacity=".18" stroke="#00CAEB" stroke-width="5"/><rect x="660" y="222" width="280" height="90" rx="24" fill="#DF3F8B" fill-opacity=".24" stroke="#DF3F8B" stroke-width="5"/><rect x="660" y="362" width="280" height="160" rx="24" fill="#9AF7FF" fill-opacity=".16" stroke="#9AF7FF" stroke-width="5"/><path d="M306 304H554M306 382H500M708 414H888" stroke="#9AF7FF" stroke-width="20" stroke-linecap="round"/>`,
+  };
+
+  const svg = `<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#000000"/><defs><radialGradient id="c" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 180) rotate(90) scale(470)"><stop stop-color="#00CAEB" stop-opacity=".64"/><stop offset="1" stop-color="#00CAEB" stop-opacity="0"/></radialGradient><radialGradient id="m" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(830 360) rotate(90) scale(520)"><stop stop-color="#DF3F8B" stop-opacity=".66"/><stop offset="1" stop-color="#DF3F8B" stop-opacity="0"/></radialGradient></defs><rect width="1200" height="800" fill="#060885" opacity=".55"/><rect width="1200" height="800" fill="url(#c)"/><rect width="1200" height="800" fill="url(#m)"/><g opacity=".16"><path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200M0 700H1200" stroke="#00CAEB"/><path d="M100 0V800M200 0V800M300 0V800M400 0V800M500 0V800M600 0V800M700 0V800M800 0V800M900 0V800M1000 0V800M1100 0V800" stroke="#00CAEB"/></g><g transform="translate(0 0)">${icons[kind]}</g></svg>`;
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+
 export const SKILLS_PREVIEW = [
-  "Python, TensorFlow, PyTorch, Scikit-learn",
-  "SQL · data modeling · query optimization",
-  "GenAI, RAG, LLMs & NLP",
-  "Power BI, Power Automate, Power Apps",
-  "Microsoft Graph API & M365 automation",
-  "Azure (Data Factory, Blob, VMs, containers)",
-  "ETL, logging, MLOps-minded delivery",
-  "Git & collaborative engineering",
+  "Python automation & scheduled pipelines",
+  "SQL data modeling, cleaning & query optimization",
+  "Power Apps, Power Automate & Power BI",
+  "Microsoft Graph API, SharePoint & M365 automation",
+  "Dashboards, KPI tracking & stakeholder reporting",
+  "Azure Data Factory, Blob, VMs & containers",
+  "NLP, GenAI, RAG & model prototyping",
+  "ETL, logging, validation & handover-ready delivery",
+];
+
+export const HERO_STATS = [
+  { value: "90-95%", label: "manual refresh reduction", detail: "Azure/Python automation pipelines" },
+  { value: "70%+", label: "workflow effort removed", detail: "Power Platform digitization" },
+  { value: "160+", label: "country sites automated", detail: "regulated global data acquisition" },
+  { value: "50%", label: "faster data retrieval", detail: "SQL optimization and reporting paths" },
+];
+
+export const CAPABILITIES = [
+  {
+    title: "Data Science & Analytics",
+    body: "Clean, preprocess, model, and explain data so leaders can trust the numbers behind dashboards, predictions, and decisions.",
+    tags: ["Python", "Pandas", "Scikit-learn", "NLP", "Power BI"],
+  },
+  {
+    title: "Enterprise Automation",
+    body: "Replace repetitive manual operations with Python jobs, Power Automate flows, Graph API integrations, and SharePoint/M365 workflows.",
+    tags: ["Python", "Power Automate", "Graph API", "SharePoint", "Azure"],
+  },
+  {
+    title: "Digital Transformation",
+    body: "Translate messy business processes into governed applications, dashboards, approval flows, and operational systems people can actually use.",
+    tags: ["Power Apps", "SQL", "Dashboards", "Process design", "M365"],
+  },
+];
+
+export const SYSTEM_HIGHLIGHTS = [
+  "Python automation for data refresh, scraping, validation, reporting, and workflow orchestration.",
+  "Power Platform delivery across Power Apps, Power Automate, Power BI, and Microsoft 365 processes.",
+  "SQL-first thinking for clean data models, query performance, KPI definitions, and reporting reliability.",
+  "Enterprise integration patterns using Microsoft Graph API, SharePoint automation, Azure Blob, and Data Factory.",
 ];
 
 /** Mapped to public repos — see https://github.com/abhishekraj1305?tab=repositories */
@@ -63,8 +125,7 @@ export const PROJECTS = [
       "Reusable foundation for experimentation and demos; sharpens production habits around logging, validation, and API hygiene.",
     stack: ["Python", "Streamlit", "Binance futures API", "HMAC auth", "CLI patterns"],
     features: ["Streamlit dashboard", "Order-type coverage", "Logging & validation-first design"],
-    image:
-      "https://images.unsplash.com/photo-1641932781181-c5c55b2b6575?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("cryptocurrency trading bot dashboard, futures trading terminal, candlestick charts, API automation, secure algorithmic trading workstation"),
   },
   {
     slug: "mlops-pipeline",
@@ -81,8 +142,7 @@ export const PROJECTS = [
       "Clear pattern for turning one-off experiments into something another engineer can re-run and compare.",
     stack: ["Python", "Logging", "Metrics & artifacts", "Reproducibility"],
     features: ["Structured outputs", "Deployment-oriented layout", "Teaching-friendly scope"],
-    image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("MLOps machine learning pipeline, model training workflow, deployment lab, experiment tracking dashboard, neural network infrastructure"),
   },
   {
     slug: "ocr-react",
@@ -99,8 +159,7 @@ export const PROJECTS = [
       "End-to-end story from pixels to actionable rows—closer to how document AI products are shaped in practice.",
     stack: ["Python", "OpenCV", "OCR", "React", "Vite", "CSV export"],
     features: ["Document capture to fields", "Dashboard review UX", "Export for downstream systems"],
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("OCR document intelligence system extracting invoice and bill data, scanned receipts, structured data dashboard"),
   },
   {
     slug: "nlp-zomato-ratings",
@@ -117,8 +176,7 @@ export const PROJECTS = [
       "Demonstrates end-to-end NLP from raw text to metric—not only exploratory EDA—with reproducible project structure.",
     stack: ["Python", "Jupyter", "NLP", "Scikit-learn"],
     features: ["Text → rating mapping", "Larger-than-toy dataset", "Documented accuracy claims"],
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("natural language processing sentiment analysis dashboard, restaurant reviews, text embeddings, rating prediction AI"),
   },
   {
     slug: "realtime-object-detection",
@@ -134,8 +192,7 @@ export const PROJECTS = [
       "Speeds demos and classroom-style reviews without a heavy custom front end.",
     stack: ["Python", "Streamlit", "Computer vision", "Object detection"],
     features: ["Live-ish UI", "Detection loop", "Shareable runnable app"],
-    image:
-      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("real time object detection computer vision interface, bounding boxes, camera analytics, AI vision system"),
   },
   {
     slug: "fraud-detection-ml",
@@ -152,8 +209,7 @@ export const PROJECTS = [
       "Portfolio-grade evidence of tabular + risk-style thinking alongside classic ML reporting.",
     stack: ["Python", "Jupyter", "Classification", "Imbalanced learning mindset"],
     features: ["Risk framing", "Feature + model iteration", "Second related repo for breadth"],
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("financial fraud detection AI dashboard, anomaly detection, secure banking risk analytics, transaction monitoring"),
   },
   {
     slug: "banking-analytics",
@@ -169,8 +225,7 @@ export const PROJECTS = [
       "Shows SQL/Python/BI-style storytelling on realistic financial shape—not generic toy CSVs only.",
     stack: ["Python", "Pandas", "Data visualization", "Financial domain"],
     features: ["ETL-style prep", "Banking context", "Presentation-ready cuts"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("banking analytics dashboard, financial data visualization, executive KPI screen, secure finance reporting"),
   },
   {
     slug: "power-bi-visualization",
@@ -186,8 +241,7 @@ export const PROJECTS = [
       "Demonstrates BI literacy alongside code-first analytics.",
     stack: ["Power BI", "Python", "Jupyter", "Data storytelling"],
     features: ["Dashboard samples", "BI + notebook pairing", "Portfolio-ready narratives"],
-    image:
-      "https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("Power BI style business intelligence dashboard, KPI analytics, enterprise reporting wall, data visualization"),
   },
   {
     slug: "real-estate-scraping",
@@ -204,8 +258,7 @@ export const PROJECTS = [
       "Pairs with broader narrative on automation-led revenue and coverage (see experience summary).",
     stack: ["Python", "Web scraping", "HTML parsing", "Data cleaning"],
     features: ["Multi-site pattern", "Domain-specific selectors", "Companion Sobha Bengaluru scraper"],
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("real estate data scraping automation, property listing intelligence dashboard, web crawler collecting housing data"),
   },
   {
     slug: "train-sideview",
@@ -221,8 +274,7 @@ export const PROJECTS = [
       "Shows attention to dataset integrity, not only model code.",
     stack: ["Python", "HTML report", "Computer vision data prep"],
     features: ["Coach-centric crops", "Coverage reporting", "Operations-minded QA"],
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("train side view computer vision dataset analysis, rail coach segmentation, coverage report, transportation AI"),
   },
   {
     slug: "hand-detection",
@@ -238,8 +290,7 @@ export const PROJECTS = [
       "Demonstrates perception + interaction design in a small, understandable codebase.",
     stack: ["Python", "MediaPipe / CV patterns", "Video"],
     features: ["Gesture → control mapping", "Interactive demo angle", "CV fundamentals"],
-    image:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("hand gesture detection computer vision, human computer interaction, media control AI, landmark tracking"),
   },
   {
     slug: "ml-projects-notebooks",
@@ -255,8 +306,7 @@ export const PROJECTS = [
       "Shows breadth of ML baselines and teaching-grade clarity.",
     stack: ["Python", "Jupyter", "Scikit-learn", "Classic ML"],
     features: ["Multiple problem types", "Notebook-native pedagogy", "Portfolio density"],
-    image:
-      "https://images.unsplash.com/photo-1526379095098-9b1f56dbfcb6?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("machine learning notebooks collection, classification and regression models, Python data science workspace"),
   },
   {
     slug: "data-science-modules",
@@ -272,8 +322,7 @@ export const PROJECTS = [
       "Best read as a personal academy-in-code—signals seriousness about foundations.",
     stack: ["Python", "HTML docs", "Data science lifecycle"],
     features: ["Modular layout", "Learning-oriented", "Broad coverage"],
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("data science learning modules, Python scripts, data lifecycle pipeline, notebooks and analytics workspace"),
   },
   {
     slug: "data-analysis-projects",
@@ -289,8 +338,7 @@ export const PROJECTS = [
       "Complements Power BI-focused repo with code-first viz and pandas workflows.",
     stack: ["Python", "Jupyter", "Visualization", "Pandas"],
     features: ["Many slices", "EDA patterns", "Viz grammar practice"],
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("data analysis and visualization projects, charts dashboard, Python analytics, insight storytelling"),
   },
   {
     slug: "abhishek-portfolio-ts",
@@ -306,8 +354,7 @@ export const PROJECTS = [
       "Shows continued investment in developer experience and shipping a public face, not only notebooks.",
     stack: ["TypeScript", "Front-end tooling"],
     features: ["Historical portfolio variant", "TS-based setup"],
-    image:
-      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("futuristic TypeScript frontend portfolio interface, code editor and responsive website mockup"),
   },
   {
     slug: "portfolio-legacy",
@@ -323,8 +370,7 @@ export const PROJECTS = [
       "Demonstrates long-term public versioning of your personal brand.",
     stack: ["Legacy web assets"],
     features: ["Archival value", "Progression narrative"],
-    image:
-      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("legacy portfolio website redesign archive, futuristic web interface, personal brand system"),
   },
   {
     slug: "python-exercises",
@@ -340,15 +386,14 @@ export const PROJECTS = [
       "Signals discipline: the boring reps that make hard projects tractable.",
     stack: ["Python"],
     features: ["Core syntax", "Problem sets", "Interview-ready muscle memory"],
-    image:
-      "https://images.unsplash.com/photo-1526378722454-3b7d8c4d26f4?auto=format&fit=crop&w=1200&q=70",
+    image: projectVisual("Python programming exercises, code editor, terminal scripts, automation practice workspace"),
   },
 ];
 
 /** Narrative for Experience page hero */
 export const EXPERIENCE_HEADLINE = {
   narrative:
-    "I work like a hybrid IC: model training where it matters, pipelines where data must move 24/7, and Power Platform where business users live. Recent focus—digital transformation at Jay Switches and high-automation data engineering at AiToXr on Azure.",
+    "I work like a hybrid technical IC: data science where prediction matters, Python automation where operations need reliability, and Power Platform where business users need fast, governed tools. Recent focus: digital transformation at Jay Switches and large-scale automation/data engineering at AiToXr.",
   tenureSummary: "AI/ML, automation, and data roles across industry and internships; SLIET Longowal graduate.",
 };
 
@@ -532,14 +577,14 @@ export const SKILLS_ALL = [
 
 export const ABOUT = {
   summary:
-    "Data Scientist and AI/ML engineer focused on digital transformation. I specialize in turning raw data into insights and building intelligent systems that automate, optimize, and improve how businesses operate—from NLP and deep learning to Power Platform and Azure-backed pipelines.",
+    "Data Scientist, Automation Developer, Power Platform Expert, and Python Developer focused on digital transformation. I turn raw operational data into cleaned datasets, reliable dashboards, workflow automations, and AI-assisted systems that improve how businesses run.",
   vision:
-    "Whether it is training models, shipping dashboards, or automating workflows, I pair technical depth with business context. I am motivated by scalable, ethical AI across healthcare, finance, e-commerce, and manufacturing: systems that are smarter, faster, and easier for people to use.",
+    "Whether I am building a Python pipeline, optimizing SQL, shipping a Power App, automating SharePoint with Graph API, or training an ML model, I connect technical delivery to business outcomes: less manual work, faster reporting, cleaner data, and systems people can adopt.",
   missionBullets: [
-    "AI & ML development — NLP, deep learning, predictive modeling with Python, TensorFlow, PyTorch, and Scikit-learn.",
-    "Process automation — Python, Power Automate, Graph API, and Microsoft 365–native patterns.",
-    "Data engineering & analytics — ETL, Azure integration, and Power BI storytelling.",
-    "Cloud & transformation — Azure services, Salesforce-aware workflows, end-to-end digital change.",
+    "Python automation — scheduled jobs, data refresh, scraping, validation, logging, reporting, and handover-ready scripts.",
+    "Power Platform — Power Apps, Power Automate, Power BI, approvals, forms, workflow digitization, and low-code business tools.",
+    "Microsoft 365 automation — Graph API, SharePoint lists/libraries, email workflows, user/process data, and governed collaboration systems.",
+    "Data science & analytics — cleaning, preprocessing, SQL, dashboards, NLP, ML prototypes, and stakeholder-ready insight stories.",
   ],
   achievementsHighlight: [
     "Zomato-style NLP rating model (public repo: ~85% on 20K+ reviews per README) with sentiment-ready storytelling.",
@@ -563,16 +608,16 @@ export const ABOUT = {
   ],
   pillars: [
     {
-      title: "AI & ML",
-      body: "Models that survive real inputs: validation discipline, leakage awareness, and deployment-minded features—not leaderboard chasing.",
+      title: "Data Science",
+      body: "Models and dashboards grounded in clean data, honest metrics, and business questions that survive outside notebooks.",
     },
     {
-      title: "Automation",
-      body: "Repeatable jobs become code, ADF pipelines, or governed Power Platform flows—with logging and handover baked in.",
+      title: "Automation Engineering",
+      body: "Repeatable work becomes Python, ADF pipelines, Graph API integrations, or governed Power Platform flows with logging and handover baked in.",
     },
     {
-      title: "Data & cloud",
-      body: "Azure-native patterns for storage and orchestration; BI layers that executives trust because definitions are honest.",
+      title: "Digital Transformation",
+      body: "Operations become traceable systems: SQL-backed apps, dashboards, approval flows, SharePoint automation, and executive-ready reporting.",
     },
   ],
   philosophy: [

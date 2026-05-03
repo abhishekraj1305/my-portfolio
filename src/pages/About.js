@@ -2,6 +2,7 @@ import { Container } from "../components/Container";
 import { Section } from "../components/Section";
 import { Reveal, RevealStagger, itemFade } from "../components/Reveal";
 import { GlassCard } from "../components/GlassCard";
+import { AiVisual } from "../components/AiVisual";
 import { motion } from "framer-motion";
 import { ABOUT, EDUCATION, CERTIFICATIONS, LANGUAGES, HONORS, SITE } from "../data/siteContent";
 
@@ -12,7 +13,7 @@ export function About() {
         <Container>
           <Reveal>
             <p className="eyebrow">About</p>
-            <h1 className="page-title">Professional summary</h1>
+            <h1 className="page-title">Builder of automated data systems</h1>
             <p className="about-location">{SITE.location}</p>
             <p className="page-lead max-800">{ABOUT.summary}</p>
             <p className="page-note max-800">{ABOUT.vision}</p>
@@ -22,10 +23,18 @@ export function About() {
 
       <Section>
         <Container>
-          <Reveal>
-            <h2 className="section-title">Core strengths</h2>
-            <p className="section-lead max-720">Where I spend depth—not buzzwords for their own sake.</p>
-          </Reveal>
+          <div className="ai-section-grid">
+            <Reveal>
+              <div>
+                <div className="section-kicker">Operating depth</div>
+                <h2 className="section-title">Core strengths</h2>
+                <p className="section-lead max-720">Where I spend depth: practical systems, measurable outcomes, and tools business teams can adopt.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <AiVisual variant="core" label="AI data intelligence core" />
+            </Reveal>
+          </div>
           <ul className="mission-bullets">
             {ABOUT.missionBullets.map((line) => (
               <Reveal key={line}>
@@ -39,6 +48,7 @@ export function About() {
       <Section className="section-tight-top">
         <Container>
           <Reveal>
+            <div className="section-kicker">Proof points</div>
             <h2 className="section-title">Highlighted outcomes</h2>
             <p className="section-lead max-720">Selected narrative anchors—details live on Projects & Experience.</p>
           </Reveal>
@@ -55,6 +65,7 @@ export function About() {
       <Section>
         <Container>
           <Reveal>
+            <div className="section-kicker">Progression</div>
             <h2 className="section-title">Career journey</h2>
           </Reveal>
           <div className="timeline">
@@ -76,6 +87,7 @@ export function About() {
       <Section>
         <Container>
           <Reveal>
+            <div className="section-kicker">Delivery modes</div>
             <h2 className="section-title">What I do</h2>
             <p className="section-lead max-720">Practical lenses for delivery with stakeholders.</p>
           </Reveal>
@@ -95,6 +107,7 @@ export function About() {
       <Section>
         <Container>
           <Reveal>
+            <div className="section-kicker">Foundation</div>
             <h2 className="section-title">Education</h2>
           </Reveal>
           <div className="edu-grid">
@@ -115,6 +128,7 @@ export function About() {
       <Section>
         <Container>
           <Reveal>
+            <div className="section-kicker">Credentials</div>
             <h2 className="section-title">Certifications</h2>
           </Reveal>
           <ul className="cert-list">
@@ -160,6 +174,7 @@ export function About() {
       <Section className="section-bottom">
         <Container>
           <Reveal>
+            <div className="section-kicker">Working philosophy</div>
             <h2 className="section-title">How I work</h2>
           </Reveal>
           <ul className="philosophy-list">

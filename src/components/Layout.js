@@ -15,6 +15,9 @@ export function Layout() {
   return (
     <div className="app-shell">
       <div className="app-bg" aria-hidden />
+      <div className="orb orb-cyan" aria-hidden />
+      <div className="orb orb-violet" aria-hidden />
+      <div className="orb orb-red" aria-hidden />
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main

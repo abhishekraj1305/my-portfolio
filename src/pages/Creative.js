@@ -31,9 +31,9 @@ export function Creative() {
         <Container>
           <Reveal>
             <p className="eyebrow">Creative</p>
-            <h1 className="page-title">Sketches · uploads</h1>
+            <h1 className="page-title">Creative systems lab</h1>
             <p className="page-lead max-800">
-              Your files from <code className="gallery-empty-code inline-code">src/websitephoto</code> appear first. Scroll sideways—three rows.
+              A visual-thinking archive that complements the technical portfolio: sketches, uploads, composition studies, and experiments in observation, detail, and form.
             </p>
           </Reveal>
         </Container>
@@ -42,7 +42,7 @@ export function Creative() {
       <Section className="section-tight-top section-bottom creative-gallery-section">
         <Container>
           <Reveal>
-            <p className="gallery-scroll-hint">Drag or swipe horizontally · 3-row grid</p>
+            <p className="gallery-scroll-hint">Drag or swipe horizontally · 3-row visual grid</p>
           </Reveal>
           <div className="gallery-scroller" tabIndex={0} role="region" aria-label="Art gallery, horizontal scroll">
             <div className="gallery-grid-3row">
@@ -60,7 +60,7 @@ export function Creative() {
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className="gallery-item-shine" aria-hidden />
-                  <img src={item.src} alt="" loading="lazy" className="gallery-img" />
+                  <img src={item.src} alt={item.title} loading="lazy" className="gallery-img" />
                   <div className="gallery-caption">
                     <span className="gallery-title">{item.title}</span>
                     <span className="gallery-medium">{item.medium}</span>
@@ -96,7 +96,7 @@ export function Creative() {
                 ×
               </button>
               <div className="modal-body">
-                <img src={active.src} alt="" className="modal-img" />
+                <img src={active.src} alt={active.title} className="modal-img" />
                 <div className="modal-meta">
                   <h2>{active.title}</h2>
                   <p className="modal-medium">{active.medium}</p>

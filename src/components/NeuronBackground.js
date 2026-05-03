@@ -30,18 +30,18 @@ export function NeuronBackground() {
     }
 
     function buildGraph() {
-      const count = clamp(Math.floor((w * h) / 22000), 42, 78);
+      const count = clamp(Math.floor((w * h) / 17000), 56, 108);
       nodes = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
+        vx: (Math.random() - 0.5) * 0.46,
+        vy: (Math.random() - 0.5) * 0.46,
         phase: Math.random() * Math.PI * 2,
         r: 1.2 + Math.random() * 2.2,
       }));
 
       edges = [];
-      const linksPer = 4;
+      const linksPer = 5;
       for (let i = 0; i < nodes.length; i++) {
         const nodeI = nodes[i];
         const dists = [];
@@ -57,7 +57,7 @@ export function NeuronBackground() {
           }
         }
       }
-      const extra = Math.floor(nodes.length * 0.35);
+      const extra = Math.floor(nodes.length * 0.55);
       for (let k = 0; k < extra; k++) {
         const i = Math.floor(Math.random() * nodes.length);
         let j = Math.floor(Math.random() * nodes.length);
@@ -73,8 +73,8 @@ export function NeuronBackground() {
       if (!w || !h) return;
       ctx.clearRect(0, 0, w, h);
       const wash = ctx.createRadialGradient(w * 0.35, h * 0.1, 0, w * 0.5, h * 0.5, Math.max(w, h));
-      wash.addColorStop(0, "rgba(56, 189, 248, 0.12)");
-      wash.addColorStop(0.45, "rgba(14, 165, 233, 0.04)");
+      wash.addColorStop(0, "rgba(0, 202, 235, 0.16)");
+      wash.addColorStop(0.45, "rgba(223, 63, 139, 0.08)");
       wash.addColorStop(1, "rgba(2, 6, 23, 0)");
       ctx.fillStyle = wash;
       ctx.fillRect(0, 0, w, h);
@@ -84,8 +84,8 @@ export function NeuronBackground() {
         const A = nodes[e.a];
         const B = nodes[e.b];
         const lg = ctx.createLinearGradient(A.x, A.y, B.x, B.y);
-        lg.addColorStop(0, "rgba(56, 189, 248, 0.35)");
-        lg.addColorStop(1, "rgba(129, 140, 248, 0.35)");
+        lg.addColorStop(0, "rgba(0, 202, 235, 0.42)");
+        lg.addColorStop(1, "rgba(223, 63, 139, 0.34)");
         ctx.strokeStyle = lg;
         ctx.beginPath();
         ctx.moveTo(A.x, A.y);
@@ -94,12 +94,12 @@ export function NeuronBackground() {
       }
       for (const n of nodes) {
         ctx.beginPath();
-        ctx.fillStyle = "rgba(207, 250, 254, 0.35)";
+        ctx.fillStyle = "rgba(154, 247, 255, 0.35)";
         ctx.arc(n.x, n.y, n.r * 3.2, 0, Math.PI * 2);
         ctx.fill();
         ctx.beginPath();
         ctx.fillStyle = "rgba(240, 249, 255, 0.95)";
-        ctx.shadowColor = "rgba(56, 189, 248, 0.85)";
+        ctx.shadowColor = "rgba(0, 202, 235, 0.95)";
         ctx.shadowBlur = 12;
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
         ctx.fill();
@@ -113,8 +113,8 @@ export function NeuronBackground() {
 
       ctx.clearRect(0, 0, w, h);
       const wash = ctx.createRadialGradient(w * 0.2, 0, 0, w * 0.55, h * 0.4, Math.max(w, h) * 0.9);
-      wash.addColorStop(0, "rgba(56, 189, 248, 0.12)");
-      wash.addColorStop(0.35, "rgba(129, 140, 248, 0.07)");
+      wash.addColorStop(0, "rgba(0, 202, 235, 0.18)");
+      wash.addColorStop(0.35, "rgba(223, 63, 139, 0.08)");
       wash.addColorStop(1, "rgba(2, 6, 23, 0)");
       ctx.fillStyle = wash;
       ctx.fillRect(0, 0, w, h);
@@ -142,12 +142,12 @@ export function NeuronBackground() {
         const flicker = 0.15 + 0.55 * e.w * pulse;
 
         const lg = ctx.createLinearGradient(A.x, A.y, B.x, B.y);
-        lg.addColorStop(0, `rgba(56, 189, 248, ${flicker * 0.45})`);
-        lg.addColorStop(0.5, `rgba(129, 140, 248, ${flicker * 0.85})`);
-        lg.addColorStop(1, `rgba(34, 211, 238, ${flicker * 0.5})`);
+        lg.addColorStop(0, `rgba(0, 202, 235, ${flicker * 0.6})`);
+        lg.addColorStop(0.5, `rgba(223, 63, 139, ${flicker * 0.55})`);
+        lg.addColorStop(1, `rgba(154, 247, 255, ${flicker * 0.5})`);
 
         ctx.strokeStyle = lg;
-        ctx.lineWidth = 1.1;
+        ctx.lineWidth = 1.25;
         ctx.lineCap = "round";
         const dash = 10 + Math.sin(t * 2 + e.a) * 4;
         ctx.setLineDash([dash, dash * 1.1]);
@@ -165,12 +165,12 @@ export function NeuronBackground() {
         const glow = 10 + Math.sin(t * 3 + n.phase) * 4;
         const coreRadi = n.r * (1 + Math.sin(t * 2.2 + n.phase) * 0.15);
         ctx.beginPath();
-        ctx.fillStyle = "rgba(207, 250, 254, 0.35)";
+        ctx.fillStyle = "rgba(154, 247, 255, 0.38)";
         ctx.arc(n.x, n.y, coreRadi * 3.2, 0, Math.PI * 2);
         ctx.fill();
         ctx.beginPath();
         ctx.fillStyle = "rgba(240, 249, 255, 0.95)";
-        ctx.shadowColor = "rgba(56, 189, 248, 0.95)";
+        ctx.shadowColor = "rgba(0, 202, 235, 0.98)";
         ctx.shadowBlur = glow;
         ctx.arc(n.x, n.y, coreRadi, 0, Math.PI * 2);
         ctx.fill();

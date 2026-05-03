@@ -3,6 +3,7 @@ import { Section } from "../components/Section";
 import { Reveal } from "../components/Reveal";
 import { ButtonLink } from "../components/ButtonLink";
 import { GlassCard } from "../components/GlassCard";
+import { AiVisual } from "../components/AiVisual";
 import { SITE, LINKS, CONTACT } from "../data/siteContent";
 
 export function Contact() {
@@ -18,9 +19,9 @@ export function Contact() {
         <Container>
           <Reveal>
             <p className="eyebrow">Contact</p>
-            <h1 className="page-title">Let’s collaborate</h1>
+            <h1 className="page-title">Let’s build cleaner operations</h1>
             <p className="page-lead max-720">
-              Open to AI, automation, analytics, and digital transformation conversations. Based in {SITE.location}. Alumni network:{" "}
+              Open to Data Science, Python automation, Power Platform, analytics, and digital transformation conversations. Based in {SITE.location}. Alumni network:{" "}
               <strong>{CONTACT.school}</strong>.
             </p>
           </Reveal>
@@ -29,6 +30,18 @@ export function Contact() {
 
       <Section className="section-tight-top section-bottom">
         <Container>
+          <Reveal>
+            <div className="contact-orbit-panel">
+              <div>
+                <div className="section-kicker">Collaboration channel</div>
+                <h2 className="section-title">Available for serious technical conversations</h2>
+                <p className="section-lead max-720">
+                  Best fit: data automation, dashboard systems, Power Platform builds, Python workflows, and AI/ML projects with business outcomes.
+                </p>
+              </div>
+              <AiVisual variant="robot" label="AI collaboration assistant" />
+            </div>
+          </Reveal>
           <Reveal>
             <GlassCard className="contact-card contact-card-wide">
               <div className="contact-grid contact-grid-3">

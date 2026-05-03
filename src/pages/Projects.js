@@ -2,6 +2,7 @@ import { Container } from "../components/Container";
 import { Section } from "../components/Section";
 import { Reveal } from "../components/Reveal";
 import { GlassCard } from "../components/GlassCard";
+import { AiVisual } from "../components/AiVisual";
 import { PROJECTS, GITHUB_USER } from "../data/siteContent";
 
 export function Projects() {
@@ -11,13 +12,13 @@ export function Projects() {
         <Container>
           <Reveal>
             <p className="eyebrow">Projects</p>
-            <h1 className="page-title">Public GitHub portfolio</h1>
+            <h1 className="page-title">Automation, AI, analytics, and data products</h1>
             <p className="page-lead max-800">
-              Each card maps to a real repository on{" "}
+              Each system maps to a real repository on{" "}
               <a href={`${GITHUB_USER}?tab=repositories`} className="inline-repo-link" target="_blank" rel="noreferrer">
                 github.com/abhishekraj1305
               </a>
-              .
+              , with problem, solution, impact, stack, and implementation signals for recruiters and technical reviewers.
             </p>
           </Reveal>
         </Container>
@@ -25,15 +26,28 @@ export function Projects() {
 
       <Section className="section-tight-top section-bottom">
         <Container>
+          <Reveal>
+            <div className="projects-lab-panel">
+              <div>
+                <div className="section-kicker">Systems lab</div>
+                <h2 className="section-title">Real repositories with AI-era delivery signals</h2>
+                <p className="section-lead max-720">
+                  The portfolio mixes machine learning, automation, OCR, data engineering, dashboards, scraping, and operational tooling.
+                </p>
+              </div>
+              <AiVisual variant="core" label="AI project systems core" />
+            </div>
+          </Reveal>
           <div className="projects-stack">
             {PROJECTS.map((p, i) => (
               <Reveal key={p.slug} delay={i * 0.03}>
                 <GlassCard className="project-detail-card">
                   <div className="project-detail-grid">
                     <div className="project-detail-media">
-                      <img src={p.image} alt="" width={600} height={400} loading="lazy" />
+                      <img src={p.image} alt={`${p.title} project visual`} width={600} height={400} loading="lazy" />
                     </div>
                     <div className="project-detail-copy">
+                      <span className="project-number">SYS-{String(i + 1).padStart(2, "0")}</span>
                       <h2>{p.title}</h2>
                       <p className="project-tagline">{p.summary}</p>
                       <div className="project-repo-row">

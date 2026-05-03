@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
+
+jest.mock('./data/creativeGallery', () => ({
+  getCreativeGalleryItems: () => [],
+}));
+
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders portfolio landing content', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /Abhishek Raj AI\/ML Automation Engineer/i })).toBeInTheDocument();
+  expect(screen.getAllByText(/Power Platform/i).length).toBeGreaterThan(0);
 });

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export function ButtonLink({ to, href, children, variant = "primary", className = "", target, rel }) {
   const cls = `btn btn-${variant} ${className}`.trim();
