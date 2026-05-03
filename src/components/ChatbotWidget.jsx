@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const CHATBOT_URL = "https://darknightcoder-abhishek-ai-bot.hf.space";
+const CHATBOT_URL = "https://darknightcoder-abhishek-ai-bot.hf.space?v=booking-admin";
 
 export function ChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
