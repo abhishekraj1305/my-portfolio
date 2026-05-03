@@ -1,0 +1,137 @@
+import { useEffect, useState, useCallback, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Container } from "../components/Container";
+import { Section } from "../components/Section";
+import { Reveal } from "../components/Reveal";
+import { getCreativeGalleryItems } from "../data/gallery";
+
+export function Creative() {
+  const items = useMemo(() => getCreativeGalleryItems(), []);
+  const [active, setActive] = useState(null);
+  const [lastFocused, setLastFocused] = useState(null);
+
+  const close = useCallback(() => setActive(null), []);
+  const openItem = useCallback((item) => {
+    setLastFocused(document.activeElement);
+    setActive(item);
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") close();
+      if (e.key !== "Tab") return;
+
+      const dialog = document.querySelector(".modal-panel");
+      const focusable = dialog?.querySelectorAll(
+        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusable?.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    if (active) {
+      document.addEventListener("keydown", onKey);
+      document.body.style.overflow = "hidden";
+      window.requestAnimationFrame(() => document.querySelector(".modal-close")?.focus());
+    }
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+      if (active && lastFocused instanceof HTMLElement) {
+        lastFocused.focus();
+      }
+    };
+  }, [active, close, lastFocused]);
+
+  return (
+    <>
+      <Section className="section-page-hero">
+        <Container>
+          <Reveal>
+            <p className="eyebrow">Creative</p>
+            <h1 className="page-title">Creative systems lab</h1>
+            <p className="page-lead max-800">
+              A visual-thinking archive that complements the technical portfolio: sketches, uploads, composition studies, and experiments in observation, detail, and form.
+            </p>
+          </Reveal>
+        </Container>
+      </Section>
+
+      <Section className="section-tight-top section-bottom creative-gallery-section">
+        <Container>
+          <Reveal>
+            <p className="gallery-scroll-hint">Drag or swipe horizontally · 3-row visual grid</p>
+          </Reveal>
+          <div className="gallery-scroller" tabIndex={0} role="region" aria-label="Art gallery, horizontal scroll">
+            <div className="gallery-grid-3row">
+              {items.map((item, i) => (
+                <motion.button
+                  type="button"
+                  key={item.id}
+                  className="gallery-cell"
+                  onClick={() => openItem(item)}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px", amount: 0.2 }}
+                  transition={{ duration: 0.4, delay: (i % 6) * 0.03 }}
+                  whileHover={{ scale: 1.03, zIndex: 2 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="gallery-item-shine" aria-hidden />
+                  <img src={item.src} alt={item.alt} loading="lazy" width={420} height={320} className="gallery-img" />
+                  <div className="gallery-caption">
+                    <span className="gallery-title">{item.title}</span>
+                    <span className="gallery-medium">{item.medium}</span>
+                  </div>
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            className="modal-backdrop"
+            role="dialog"
+            aria-modal="true"
+            aria-label={active.title}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={close}
+          >
+            <motion.div
+              className="modal-panel glass-card"
+              initial={{ opacity: 0, scale: 0.94, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, y: 12 }}
+              transition={{ type: "spring", stiffness: 320, damping: 30 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button type="button" className="modal-close" onClick={close} aria-label="Close">
+                ×
+              </button>
+              <div className="modal-body">
+                <img src={active.fullSrc || active.src} alt={active.alt} className="modal-img" />
+                <div className="modal-meta">
+                  <h2>{active.title}</h2>
+                  <p className="modal-medium">{active.medium}</p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}

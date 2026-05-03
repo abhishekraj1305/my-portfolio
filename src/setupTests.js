@@ -4,14 +4,6 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-if (typeof require.context !== 'function') {
-  require.context = () => {
-    const context = () => '';
-    context.keys = () => [];
-    return context;
-  };
-}
-
 HTMLCanvasElement.prototype.getContext = () => null;
 
 class MockIntersectionObserver {

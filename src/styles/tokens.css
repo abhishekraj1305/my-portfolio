@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,600;1,700&family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --bg-deep: #05070d;
+  --bg-mid: #08111f;
+  --bg-soft: #0d1728;
+  --bg-panel: rgba(10, 18, 32, 0.78);
+  --bg-card: rgba(12, 22, 38, 0.72);
+  --stroke: rgba(124, 231, 255, 0.18);
+  --stroke-strong: rgba(124, 231, 255, 0.4);
+  --accent: #48e1ff;
+  --accent-bright: #c7f7ff;
+  --accent-red: #ff4f92;
+  --accent-violet: #8e7cff;
+  --accent-green: #7cffb2;
+  --text: #f4f8fb;
+  --muted: #a8b7c8;
+  --muted-2: #75879c;
+  --container: 1180px;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+  --shadow-soft: 0 14px 42px rgba(0, 0, 0, 0.24);
+  --font-body: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Chakra Petch", "Manrope", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+  --space-page: clamp(64px, 10vw, 112px);
+}

@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Abhishek Raj Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hiring-focused portfolio for Data Scientist, Automation Developer, Power Platform Expert, Python Developer, and Digital Transformation Executive roles.
 
-## Available Scripts
+The site presents case-study style proof of work across Python automation, SQL-backed reporting, Power Platform delivery, Microsoft 365 automation, AI/ML prototypes, dashboards, OCR, scraping, and data products.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- React 19
+- Vite
+- React Router
+- Framer Motion
+- Sharp image optimization
+- GitHub Pages deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Local Development
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+npm run optimize:images
+npm run dev
+```
 
-### `npm test`
+## Production Build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run build
+npm run preview
+```
 
-### `npm run build`
+The app is configured for GitHub Pages at:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```text
+https://abhishekraj1305.github.io/my-portfolio/
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Quality Checks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm test
+npm run build
+```
 
-### `npm run eject`
+## Portfolio Strategy
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The strongest projects are presented as case studies with:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Problem
+- My role
+- Architecture / workflow
+- Tech stack
+- Business impact
+- Proof links
+- What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Lower-signal practice repositories are kept in a learning archive so recruiters see the best technical evidence first.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Image Pipeline
 
-## Learn More
+Original gallery uploads stay in `src/websitephoto`. Optimized WebP derivatives are generated into:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `src/websitephoto/optimized/thumbs`
+- `src/websitephoto/optimized/full`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The gallery loads thumbnails in the grid and full WebP images in the modal.

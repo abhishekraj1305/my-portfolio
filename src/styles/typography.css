@@ -1,0 +1,151 @@
+.eyebrow,
+.section-kicker,
+.label,
+.project-number,
+.hero-terminal code,
+.inline-code,
+.tool-chip,
+.skill-pill,
+.role-badge,
+.gallery-medium,
+.modal-medium {
+  font-family: var(--font-mono);
+}
+
+.hero-title,
+.hero-title-sub,
+.page-title,
+.section-title,
+.cta-title,
+.timeline-title,
+.pillar-card h3,
+.project-card-body h3,
+.project-detail-copy h2,
+.exp-job-role,
+.mini-card-title,
+.edu-school,
+.modal-meta h2,
+.footer-name,
+.nav-brand {
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+.eyebrow,
+.section-kicker,
+.label,
+.project-number {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.section-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.hero-title {
+  margin: 0 0 18px;
+  max-width: none;
+  font-size: clamp(2.65rem, 12.8vw, 5rem);
+  line-height: 0.82;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.hero-title > span:first-child {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-title-sub {
+  display: block;
+  margin-top: 14px;
+  max-width: 13ch;
+  color: var(--accent-bright);
+  font-size: clamp(1.35rem, 7vw, 2.65rem);
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.hero-role,
+.hero-location,
+.about-location {
+  font-weight: 700;
+}
+
+.hero-role {
+  max-width: 58ch;
+  margin: 0 0 8px;
+  color: #dbe8f4;
+  font-size: clamp(0.9rem, 2.9vw, 1.02rem);
+  line-height: 1.58;
+}
+
+.hero-location,
+.about-location {
+  margin: 0 0 18px;
+  color: var(--accent-bright);
+  font-size: 0.92rem;
+}
+
+.hero-lead,
+.section-lead,
+.page-lead {
+  color: #c5d4e3;
+  line-height: 1.72;
+}
+
+.hero-lead {
+  max-width: 590px;
+  margin: 0 0 26px;
+  font-size: clamp(1rem, 3.5vw, 1.14rem);
+}
+
+.section-title {
+  margin: 0 0 14px;
+  font-size: clamp(1.75rem, 6vw, 2.8rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+}
+
+.page-title {
+  margin: 0 0 18px;
+  max-width: 980px;
+  font-size: clamp(2.25rem, 8vw, 4.4rem);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+}
+
+.section-lead,
+.page-lead {
+  margin: 0 0 28px;
+  font-size: clamp(1rem, 2.8vw, 1.1rem);
+}
+
+.page-note {
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--stroke);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: rgba(9, 18, 32, 0.62);
+  color: #d6e3ef;
+  line-height: 1.7;
+}
+
+.max-720 { max-width: 720px; }
+.max-800 { max-width: 800px; }

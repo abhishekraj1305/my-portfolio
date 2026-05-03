@@ -1,0 +1,210 @@
+@media (min-width: 640px) {
+  .hero-title {
+    max-width: none;
+    font-size: clamp(3.55rem, 8vw, 4.85rem);
+  }
+
+  .hero-title-sub {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+  }
+
+  .edu-grid,
+  .about-split,
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-body {
+    grid-template-columns: minmax(220px, 420px) 1fr;
+    align-items: start;
+  }
+
+  .gallery-grid-3row {
+    grid-auto-columns: minmax(220px, 282px);
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+
+  .footer-copy {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(420px, 0.9fr);
+    gap: clamp(36px, 5vw, 76px);
+  }
+
+  .hero-title {
+    font-size: clamp(4.35rem, 5vw, 5.85rem);
+  }
+
+  .hero-title-sub {
+    font-size: clamp(2.2rem, 3.1vw, 3.25rem);
+  }
+
+  .hero-identity-stage {
+    width: min(112%, 660px);
+    min-height: 650px;
+  }
+
+  .hero-profile-ring {
+    width: min(100%, 540px);
+  }
+
+  .hero-profile-img {
+    max-height: 720px;
+  }
+
+  .ai-section-grid,
+  .experience-command,
+  .projects-lab-panel,
+  .contact-orbit-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  }
+
+  .ai-section-grid-flip {
+    grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+  }
+
+  .case-study-grid,
+  .project-detail-grid {
+    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .project-detail-media img {
+    height: 100%;
+    min-height: 390px;
+  }
+}
+
+@media (min-width: 960px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle,
+  .nav-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-head {
+    align-items: stretch;
+  }
+
+  .hero-actions,
+  .cta-actions,
+  .contact-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-badges span,
+  .skill-pill,
+  .tool-chip {
+    font-size: 0.73rem;
+  }
+
+  .hero-visual {
+    margin-top: 4px;
+  }
+
+  .neuron-canvas,
+  .orb {
+    opacity: 0.24;
+  }
+
+  .app-bg::before {
+    opacity: 0.18;
+  }
+
+  .hero-cyber-bg {
+    left: -112px;
+    top: 130px;
+    width: 300px;
+    opacity: 0.1;
+    transform: translateY(0);
+  }
+
+  .hero-neuron-orbits {
+    inset: 4% -2% 2% -2%;
+    opacity: 0.72;
+  }
+
+  .ai-visual {
+    min-height: 280px;
+  }
+
+  .chatbot-widget {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    justify-items: stretch;
+  }
+
+  .chatbot-launcher {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 0.84rem;
+  }
+
+  .chatbot-panel {
+    width: 100%;
+    height: min(640px, calc(100vh - 88px));
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.42rem, 12.8vw, 3.35rem);
+  }
+
+  .hero-title-sub {
+    font-size: clamp(1.22rem, 6.6vw, 1.62rem);
+  }
+
+  .hero-identity-stage {
+    min-height: 390px;
+  }
+
+  .hero-terminal {
+    width: min(326px, 94%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
