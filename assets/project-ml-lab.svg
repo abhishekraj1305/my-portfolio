@@ -1,0 +1,9 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#02061a"/>
+  <defs><radialGradient id="a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(590 360) rotate(90) scale(460 620)"><stop stop-color="#00CAEB" stop-opacity=".72"/><stop offset=".55" stop-color="#060885" stop-opacity=".7"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient><radialGradient id="b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(820 280) rotate(90) scale(360)"><stop stop-color="#DF3F8B" stop-opacity=".7"/><stop offset="1" stop-color="#DF3F8B" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1200" height="800" fill="url(#a)"/><rect width="1200" height="800" fill="url(#b)"/>
+  <g opacity=".16"><path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200M0 700H1200" stroke="#00CAEB"/><path d="M100 0V800M200 0V800M300 0V800M400 0V800M500 0V800M600 0V800M700 0V800M800 0V800M900 0V800M1000 0V800M1100 0V800" stroke="#00CAEB"/></g>
+  <g stroke-width="6" stroke-linecap="round"><path d="M190 570C280 420 370 512 470 360C560 224 656 280 760 170C840 86 930 126 1010 92" stroke="#9AF7FF"/><path d="M190 618C330 548 430 604 550 502C670 400 760 470 1010 300" stroke="#DF3F8B"/></g>
+  <g><circle cx="470" cy="360" r="22" fill="#00CAEB"/><circle cx="760" cy="170" r="22" fill="#DF3F8B"/><circle cx="550" cy="502" r="20" fill="#9AF7FF"/><circle cx="1010" cy="300" r="18" fill="#DF3F8B"/></g>
+  <rect x="132" y="122" width="320" height="170" rx="24" fill="#000" fill-opacity=".55" stroke="#00CAEB" stroke-width="3"/><path d="M178 178H382M178 226H332" stroke="#9AF7FF" stroke-width="15" stroke-linecap="round"/><path d="M178 226H255" stroke="#DF3F8B" stroke-width="15" stroke-linecap="round"/>
+</svg>

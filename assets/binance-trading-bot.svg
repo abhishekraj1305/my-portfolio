@@ -1,0 +1,49 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#000000"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#001E2B"/>
+      <stop offset="0.48" stop-color="#060885"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="pink" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(850 230) rotate(90) scale(430 380)">
+      <stop stop-color="#DF3F8B" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#DF3F8B" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#pink)"/>
+  <g opacity="0.16">
+    <path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200M0 700H1200" stroke="#00CAEB"/>
+    <path d="M100 0V800M200 0V800M300 0V800M400 0V800M500 0V800M600 0V800M700 0V800M800 0V800M900 0V800M1000 0V800M1100 0V800" stroke="#00CAEB"/>
+  </g>
+  <g filter="url(#glow)" opacity="0.55">
+    <circle cx="875" cy="290" r="170" fill="#00CAEB" fill-opacity="0.24"/>
+    <circle cx="875" cy="290" r="238" stroke="#DF3F8B" stroke-width="5"/>
+  </g>
+  <g>
+    <rect x="92" y="122" width="470" height="520" rx="34" fill="#030A23" fill-opacity="0.86" stroke="#00CAEB" stroke-width="3"/>
+    <circle cx="132" cy="162" r="10" fill="#DF3F8B"/>
+    <circle cx="164" cy="162" r="10" fill="#00CAEB"/>
+    <circle cx="196" cy="162" r="10" fill="#9AF7FF"/>
+    <path d="M132 230H430M132 282H500M132 334H384M132 386H462M132 438H530M132 490H410" stroke="#9AF7FF" stroke-width="16" stroke-linecap="round" opacity="0.72"/>
+    <path d="M132 230H294M132 334H252M132 438H340" stroke="#DF3F8B" stroke-width="16" stroke-linecap="round"/>
+    <path d="M132 282H352M132 386H305M132 490H280" stroke="#00CAEB" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <g>
+    <path d="M675 558C758 452 834 396 914 342C1005 281 1062 213 1088 128" stroke="#00CAEB" stroke-width="10" stroke-linecap="round"/>
+    <path d="M675 558C748 512 812 506 890 526C954 542 1010 520 1062 466" stroke="#DF3F8B" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="675" cy="558" r="18" fill="#9AF7FF"/>
+    <circle cx="914" cy="342" r="18" fill="#00CAEB"/>
+    <circle cx="1088" cy="128" r="18" fill="#DF3F8B"/>
+    <circle cx="1062" cy="466" r="18" fill="#DF3F8B"/>
+  </g>
+  <g>
+    <rect x="680" y="136" width="285" height="184" rx="28" fill="#000000" fill-opacity="0.76" stroke="#00CAEB" stroke-width="3"/>
+    <path d="M732 226L806 152L880 226L806 300L732 226Z" fill="#DF3F8B" fill-opacity="0.92"/>
+    <path d="M806 152L842 226L806 300L770 226L806 152Z" fill="#9AF7FF" fill-opacity="0.92"/>
+  </g>
+  <text x="92" y="704" fill="#DFFBFF" font-family="Arial, sans-serif" font-size="54" font-weight="800">USDT-M FUTURES BOT</text>
+  <text x="94" y="752" fill="#00CAEB" font-family="Arial, sans-serif" font-size="28" font-weight="700">HMAC signing · testnet execution · validation · logs</text>
+</svg>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.7ba563e8.css",
-    "main.js": "/my-portfolio/static/js/main.4113cc16.js",
+    "main.css": "/my-portfolio/static/css/main.c8924a96.css",
+    "main.js": "/my-portfolio/static/js/main.979bc759.js",
     "static/js/453.cd23d7d8.chunk.js": "/my-portfolio/static/js/453.cd23d7d8.chunk.js",
     "static/media/fed93556-d7c1-44b7-a084-a05f55c530c1.png": "/my-portfolio/static/media/fed93556-d7c1-44b7-a084-a05f55c530c1.4a30b2c79f16497ef8d3.png",
     "static/media/sketch1633108803047.png": "/my-portfolio/static/media/sketch1633108803047.0dd6b7741b10da7c04aa.png",
@@ -25,7 +25,6 @@
     "static/media/sketch1631680957529.png": "/my-portfolio/static/media/sketch1631680957529.bac3e71f516f3d7eb216.png",
     "static/media/IMG_20251006_075249459.jpg": "/my-portfolio/static/media/IMG_20251006_075249459.e76fdd10efc6ae3fc08d.jpg",
     "static/media/IMG20210110142154-01.jpeg": "/my-portfolio/static/media/IMG20210110142154-01.5a011fb5e03e119a9ee8.jpeg",
-    "static/media/profile.png": "/my-portfolio/static/media/profile.0354db80fd6448127a61.png",
     "static/media/IMG_20240525_184904682.jpg": "/my-portfolio/static/media/IMG_20240525_184904682.a2249c5fc0fa17d911bb.jpg",
     "static/media/IMG20210411140554-01.jpeg": "/my-portfolio/static/media/IMG20210411140554-01.7434140d882927989ab8.jpeg",
     "static/media/IMG20210606205927-01.jpeg": "/my-portfolio/static/media/IMG20210606205927-01.998590bc5ecbfa24f06f.jpeg",
@@ -46,6 +45,7 @@
     "static/media/love night-01_1.jpeg": "/my-portfolio/static/media/love night-01_1.1b3076fef040a856ad98.jpeg",
     "static/media/BeautyDrawing-01-01.jpeg": "/my-portfolio/static/media/BeautyDrawing-01-01.6db2ef57ab2ab75aed25.jpeg",
     "static/media/IMG-20250622-WA0006.jpg": "/my-portfolio/static/media/IMG-20250622-WA0006.9989f70ede4b6cf1ce75.jpg",
+    "static/media/ful.png": "/my-portfolio/static/media/ful.5c1922d176ffa4e15330.png",
     "static/media/sketch1639423429801.png": "/my-portfolio/static/media/sketch1639423429801.14410c8abb89e15fcf65.png",
     "static/media/Untitled_Artwork (3).jpg": "/my-portfolio/static/media/Untitled_Artwork (3).dae2658b33cebf391e84.jpg",
     "static/media/IMG-20210929-WA0003.jpg": "/my-portfolio/static/media/IMG-20210929-WA0003.0d990b7a26e4f4d6a7c3.jpg",
@@ -58,12 +58,12 @@
     "static/media/candle-01.jpeg": "/my-portfolio/static/media/candle-01.549114a3f5042549be74.jpeg",
     "static/media/sketch1632665106913.png": "/my-portfolio/static/media/sketch1632665106913.aed549ddcf9794c09f9f.png",
     "index.html": "/my-portfolio/index.html",
-    "main.7ba563e8.css.map": "/my-portfolio/static/css/main.7ba563e8.css.map",
-    "main.4113cc16.js.map": "/my-portfolio/static/js/main.4113cc16.js.map",
+    "main.c8924a96.css.map": "/my-portfolio/static/css/main.c8924a96.css.map",
+    "main.979bc759.js.map": "/my-portfolio/static/js/main.979bc759.js.map",
     "453.cd23d7d8.chunk.js.map": "/my-portfolio/static/js/453.cd23d7d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ba563e8.css",
-    "static/js/main.4113cc16.js"
+    "static/css/main.c8924a96.css",
+    "static/js/main.979bc759.js"
   ]
 }
