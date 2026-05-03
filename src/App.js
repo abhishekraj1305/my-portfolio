@@ -6,6 +6,7 @@ import { Projects } from "./pages/Projects";
 import { Experience } from "./pages/Experience";
 import { Creative } from "./pages/Creative";
 import { Contact } from "./pages/Contact";
+import { ChatbotWidget } from "./components/ChatbotWidget";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
+      <ChatbotWidget />
     </BrowserRouter>
   );
 }
