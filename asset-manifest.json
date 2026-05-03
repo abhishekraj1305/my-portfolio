@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.c8924a96.css",
-    "main.js": "/my-portfolio/static/js/main.979bc759.js",
+    "main.css": "/my-portfolio/static/css/main.f26949c8.css",
+    "main.js": "/my-portfolio/static/js/main.2e01ea1b.js",
     "static/js/453.cd23d7d8.chunk.js": "/my-portfolio/static/js/453.cd23d7d8.chunk.js",
     "static/media/fed93556-d7c1-44b7-a084-a05f55c530c1.png": "/my-portfolio/static/media/fed93556-d7c1-44b7-a084-a05f55c530c1.4a30b2c79f16497ef8d3.png",
     "static/media/sketch1633108803047.png": "/my-portfolio/static/media/sketch1633108803047.0dd6b7741b10da7c04aa.png",
@@ -58,12 +58,12 @@
     "static/media/candle-01.jpeg": "/my-portfolio/static/media/candle-01.549114a3f5042549be74.jpeg",
     "static/media/sketch1632665106913.png": "/my-portfolio/static/media/sketch1632665106913.aed549ddcf9794c09f9f.png",
     "index.html": "/my-portfolio/index.html",
-    "main.c8924a96.css.map": "/my-portfolio/static/css/main.c8924a96.css.map",
-    "main.979bc759.js.map": "/my-portfolio/static/js/main.979bc759.js.map",
+    "main.f26949c8.css.map": "/my-portfolio/static/css/main.f26949c8.css.map",
+    "main.2e01ea1b.js.map": "/my-portfolio/static/js/main.2e01ea1b.js.map",
     "453.cd23d7d8.chunk.js.map": "/my-portfolio/static/js/453.cd23d7d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8924a96.css",
-    "static/js/main.979bc759.js"
+    "static/css/main.f26949c8.css",
+    "static/js/main.2e01ea1b.js"
   ]
 }
