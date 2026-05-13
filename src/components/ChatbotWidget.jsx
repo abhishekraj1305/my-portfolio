@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-const CHATBOT_URL = "https://darknightcoder-abhishek-ai-bot.hf.space?v=admin-cards";
+const CHATBOT_URL = "https://darknightcoder-abhishek-ai-bot.hf.space?v=vectorless-fast";
 
 export function ChatbotWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFrameLoaded, setIsFrameLoaded] = useState(false);
 
   useEffect(() => {
     function handleKeyDown(event) {
@@ -15,6 +16,12 @@ export function ChatbotWidget() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsFrameLoaded(false);
+    }
+  }, [isOpen]);
 
   return (
     <div className={`chatbot-widget ${isOpen ? "chatbot-widget-open" : ""}`}>
@@ -45,12 +52,19 @@ export function ChatbotWidget() {
               </button>
             </div>
           </header>
+          {!isFrameLoaded && (
+            <div className="chatbot-loading" role="status" aria-live="polite">
+              <span className="chatbot-loading-dot" aria-hidden />
+              <span>Starting Abhishek's AI...</span>
+            </div>
+          )}
           <iframe
             className="chatbot-frame"
             src={CHATBOT_URL}
             title="Abhishek's AI Bot"
-            loading="lazy"
+            loading="eager"
             allow="clipboard-read; clipboard-write"
+            onLoad={() => setIsFrameLoaded(true)}
           />
         </section>
       )}
