@@ -36,8 +36,12 @@ test('renders data engineering case studies on projects page', () => {
   expect(screen.getByText(/Graph API task-data ETL/i)).toBeInTheDocument();
 });
 
-test('opens the chatbot widget and supports escape to close', async () => {
+test('opens and closes the chatbot widget', async () => {
   render(<App />);
+  await userEvent.click(screen.getByRole('button', { name: /Open Abhishek's AI Bot/i }));
+  expect(screen.getByLabelText(/Abhishek's AI chatbot/i)).toBeInTheDocument();
+  await userEvent.click(screen.getByRole('button', { name: /Close Abhishek's AI Bot/i }));
+  expect(screen.queryByLabelText(/Abhishek's AI chatbot/i)).not.toBeInTheDocument();
   await userEvent.click(screen.getByRole('button', { name: /Open Abhishek's AI Bot/i }));
   expect(screen.getByLabelText(/Abhishek's AI chatbot/i)).toBeInTheDocument();
   await userEvent.keyboard('{Escape}');

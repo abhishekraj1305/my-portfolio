@@ -34,6 +34,14 @@ export function ChatbotWidget() {
               <p className="chatbot-panel-kicker">Abhishek's AI</p>
               <h2>Ask me anything</h2>
             </div>
+            <button
+              className="chatbot-panel-close"
+              type="button"
+              onClick={() => setIsOpen(false)}
+              aria-label="Close Abhishek's AI Bot"
+            >
+              <span aria-hidden>×</span>
+            </button>
           </header>
           {!isFrameLoaded && (
             <div className="chatbot-loading" role="status" aria-live="polite">
