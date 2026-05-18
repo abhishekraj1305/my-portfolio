@@ -21,7 +21,7 @@ export function Contact() {
             <p className="eyebrow">Contact</p>
             <h1 className="page-title">Let’s build cleaner operations</h1>
             <p className="page-lead max-720">
-              Open to Data Science, Python automation, Power Platform, analytics, and digital transformation conversations. Based in {SITE.location}. Alumni network:{" "}
+              Open to Data Engineering, Data Science, Python automation, Power Platform, analytics, and digital transformation conversations. Based in {SITE.location}. Alumni network:{" "}
               <strong>{CONTACT.school}</strong>.
             </p>
           </Reveal>
@@ -34,9 +34,9 @@ export function Contact() {
             <div className="contact-orbit-panel">
               <div>
                 <div className="section-kicker">Collaboration channel</div>
-                <h2 className="section-title">Available for serious technical conversations</h2>
+                <h2 className="section-title">Available for serious data and automation conversations</h2>
                 <p className="section-lead max-720">
-                  Best fit: data automation, dashboard systems, Power Platform builds, Python workflows, and AI/ML projects with business outcomes.
+                  Best fit: data pipelines, warehouse-style modeling, dashboard systems, Power Platform builds, Python workflows, and AI/ML projects with business outcomes.
                 </p>
               </div>
               <AiVisual variant="robot" label="AI collaboration assistant" />

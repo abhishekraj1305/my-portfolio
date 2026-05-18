@@ -4,11 +4,11 @@ export const GITHUB_USER = "https://github.com/abhishekraj1305";
 export const SITE = {
   name: "Abhishek Raj",
   title:
-    "Data Scientist · Automation Developer · Power Platform Expert · Python Developer",
+    "Data Engineer · Data Scientist · AI/ML Automation Engineer · Power Platform Expert",
   titleFull:
-    "Data Scientist | Automation Developer | Power Platform Expert | Python Developer | Digital Transformation Executive",
+    "Data Engineer | Data Scientist | AI/ML Automation Engineer | Power Platform Expert | Digital Transformation Specialist",
   tagline:
-    "I design data-driven automation systems that turn messy operations into clean dashboards, governed workflows, and measurable enterprise outcomes.",
+    "I build Python, SQL, Azure, and API-driven data systems that turn fragmented operations into reliable pipelines, governed datasets, and dashboard-ready business intelligence.",
   linkedIn: "https://www.linkedin.com/in/abhishekraj1305/",
   email: "mailto:r.abhishek1305@gmail.com",
   emailDisplay: "r.abhishek1305@gmail.com",
@@ -32,8 +32,26 @@ export const CONTACT = {
 
 export const HOME_INTRO = {
   short:
-    "Data Scientist and automation developer focused on enterprise digitization: Python pipelines, SQL-backed reporting, Power Apps, Power Automate, SharePoint/M365 workflows, Microsoft Graph API integrations, dashboards, and AI-assisted data products. Based in Gurugram with public code and experiments on GitHub.",
+    "Data Engineer, Data Scientist, and automation developer focused on enterprise digitization: ETL/ELT pipelines, SQL-backed reporting, Azure Data Factory, Azure Blob/ADLS, Microsoft Graph API integrations, Power Platform workflows, dashboards, and AI-assisted data products. Based in Gurugram with public code and experiments on GitHub.",
 };
+
+export const ROLE_TRACKS = [
+  {
+    title: "Data Engineering",
+    body: "ETL/ELT, PySpark, SQL Server, Azure Data Factory, Blob/ADLS, Delta Lake, Airflow, validation, monitoring, and dashboard-ready data models.",
+    tags: ["Python", "SQL", "PySpark", "ADF", "Delta Lake"],
+  },
+  {
+    title: "Data Science & AI",
+    body: "NLP, computer vision, model prototyping, RAG, evaluation narratives, and practical ML workflows that connect models to business use cases.",
+    tags: ["Pandas", "Scikit-learn", "OpenCV", "NLP", "RAG"],
+  },
+  {
+    title: "Automation & Power Platform",
+    body: "Microsoft Graph API, Planner, To-Do, OneDrive, Excel automation, Power BI, Power Apps, Power Automate, and SharePoint/M365 workflows.",
+    tags: ["Graph API", "Power BI", "Power Apps", "M365", "PDI"],
+  },
+];
 
 function projectVisual(prompt) {
   const key = prompt.toLowerCase();
@@ -66,53 +84,121 @@ function projectVisual(prompt) {
 }
 
 export const SKILLS_PREVIEW = [
-  "Python automation & scheduled pipelines",
-  "SQL data modeling, cleaning & query optimization",
-  "Power Apps, Power Automate & Power BI",
-  "Microsoft Graph API, SharePoint & M365 automation",
-  "Dashboards, KPI tracking & stakeholder reporting",
-  "Azure Data Factory, Blob, VMs & containers",
-  "NLP, GenAI, RAG & model prototyping",
-  "ETL, logging, validation & handover-ready delivery",
+  "Python, SQL, PySpark & Spark SQL",
+  "ETL/ELT, batch processing & incremental loading",
+  "Medallion Architecture, CDC & SCD Type 2",
+  "Azure Data Factory, Blob, ADLS, Azure SQL & VMs",
+  "Power BI, dashboard-ready data modeling & KPI layers",
+  "Microsoft Graph API, Office 365 APIs & REST integrations",
+  "Pentaho Data Integration, Airflow & scheduled workflows",
+  "Logging, validation, monitoring & idempotent pipelines",
 ];
 
 export const HERO_STATS = [
-  { value: "90-95%", label: "manual refresh reduction", detail: "Azure/Python automation pipelines" },
-  { value: "70%+", label: "workflow effort removed", detail: "Power Platform digitization" },
-  { value: "160+", label: "country sites automated", detail: "regulated global data acquisition" },
-  { value: "50%", label: "faster data retrieval", detail: "SQL optimization and reporting paths" },
+  { value: "200+", label: "employees in task-data pipelines", detail: "Graph API, Planner, To-Do, OneDrive, Excel" },
+  { value: "160+", label: "global sources ingested", detail: "Python and Azure VM extraction workflows" },
+  { value: "95%", label: "manual intervention reduced", detail: "ADF and Azure Blob batch ETL" },
+  { value: "100K+", label: "records extracted and cleaned", detail: "real-estate data pipeline impact" },
 ];
 
 export const CAPABILITIES = [
   {
-    title: "Data Science & Analytics",
-    body: "Clean, preprocess, model, and explain data so leaders can trust the numbers behind dashboards, predictions, and decisions.",
-    tags: ["Python", "Pandas", "Scikit-learn", "NLP", "Power BI"],
+    title: "Data Engineering & Warehousing",
+    body: "Build extraction, validation, transformation, orchestration, and serving layers so reporting teams can trust scheduled data flows.",
+    tags: ["PySpark", "Delta Lake", "Airflow", "SQL Server", "ADF"],
   },
   {
     title: "Enterprise Automation",
-    body: "Replace repetitive manual operations with Python jobs, Power Automate flows, Graph API integrations, and SharePoint/M365 workflows.",
-    tags: ["Python", "Power Automate", "Graph API", "SharePoint", "Azure"],
+    body: "Replace repetitive manual operations with Python jobs, Graph API integrations, Pentaho workflows, and Power Platform delivery.",
+    tags: ["Python", "Graph API", "PDI", "Power Automate", "Azure"],
   },
   {
-    title: "Digital Transformation",
-    body: "Translate messy business processes into governed applications, dashboards, approval flows, and operational systems people can actually use.",
-    tags: ["Power Apps", "SQL", "Dashboards", "Process design", "M365"],
+    title: "Data Science & Applied AI",
+    body: "Clean, preprocess, model, and explain data through NLP, CV, RAG, and dashboard workflows that stay grounded in measurable outcomes.",
+    tags: ["NLP", "Computer vision", "RAG", "Scikit-learn", "Power BI"],
   },
 ];
 
 export const SYSTEM_HIGHLIGHTS = [
-  "Python automation for data refresh, scraping, validation, reporting, and workflow orchestration.",
-  "Power Platform delivery across Power Apps, Power Automate, Power BI, and Microsoft 365 processes.",
-  "SQL-first thinking for clean data models, query performance, KPI definitions, and reporting reliability.",
-  "Enterprise integration patterns using Microsoft Graph API, SharePoint automation, Azure Blob, and Data Factory.",
+  "Python + SQL pipelines for extraction, transformation, validation, logging, monitoring, reporting, and handover-ready delivery.",
+  "Warehouse-style thinking across Bronze/Silver/Gold layers, incremental loads, CDC, SCD Type 2, idempotent design, and dashboard-ready models.",
+  "Azure delivery across Data Factory, Blob Storage, ADLS, Azure SQL, VMs, scheduled batch processing, and operational pipeline reliability.",
+  "Enterprise integration patterns using Microsoft Graph API, Office 365 APIs, Planner, To-Do, OneDrive, Excel, Power BI, and Power Platform.",
 ];
 
 /** Mapped to public repos — see https://github.com/abhishekraj1305?tab=repositories */
 export const PROJECTS = [
   {
-    slug: "binance-futures-bot",
+    slug: "medallion-pyspark-pipeline",
     highlight: true,
+    title: "Medallion Architecture data pipeline using PySpark",
+    repoUrl: "",
+    summary:
+      "Scalable PySpark and Delta Lake pipeline implementing Bronze, Silver, and Gold layers with incremental loading, SCD Type 2 history, validation, logging, and Airflow orchestration.",
+    problem:
+      "Analytics teams need trusted historical datasets, not one-off cleaned files that overwrite history or hide late-arriving changes.",
+    solution:
+      "Built a layered warehouse-style pipeline: raw landing in Bronze, cleaned/conformed data in Silver, and reporting-ready Gold tables with SCD Type 2 tracking.",
+    impact:
+      "Demonstrates production-grade data warehousing concepts recruiters expect: medallion layers, incremental loads, idempotent processing, history tracking, and quality gates.",
+    stack: ["PySpark", "Spark SQL", "Delta Lake", "Apache Airflow", "SCD Type 2", "CDC"],
+    features: ["Bronze/Silver/Gold layers", "Incremental loading", "Validation and logging"],
+    image: projectVisual("medallion architecture data warehouse pipeline, bronze silver gold layers, spark delta lake airflow orchestration dashboard"),
+  },
+  {
+    slug: "azure-batch-data-pipeline",
+    highlight: true,
+    title: "End-to-end Azure batch data pipeline",
+    repoUrl: "",
+    summary:
+      "Azure Data Factory, Blob/ADLS, SQL Server, and Python batch workflow for ingesting structured data, validating it, transforming it, and serving reporting-ready tables.",
+    problem:
+      "Manual file movement and inconsistent refresh logic make enterprise reporting slow, fragile, and hard to audit.",
+    solution:
+      "Designed scheduled Azure batch processing with source extraction, storage layers, SQL transformations, validation checks, and dashboard-facing outputs.",
+    impact:
+      "Frames Azure Data Factory and SQL Server work as a repeatable data engineering pattern instead of a single dashboard refresh script.",
+    stack: ["Azure Data Factory", "Azure Blob", "ADLS", "SQL Server", "Python", "Power BI"],
+    features: ["Scheduled batch processing", "Data validation checks", "Reporting-ready serving layer"],
+    image: projectVisual("Azure Data Factory batch ETL pipeline, blob storage data lake SQL Server reporting architecture dashboard"),
+  },
+  {
+    slug: "graph-task-data-etl",
+    highlight: true,
+    title: "Microsoft Graph API task-data ETL for 200+ employees",
+    repoUrl: "",
+    summary:
+      "Python, SQL, Pentaho PDI, and Microsoft Graph API pipelines consolidating Planner, To-Do, OneDrive, and Excel task data for enterprise reporting.",
+    problem:
+      "Task status, ownership, and overdue work were fragmented across Microsoft 365 systems, creating manual reporting effort and inconsistent visibility.",
+    solution:
+      "Built API-driven extraction and consolidation workflows with validation, logging, scheduled batch execution, and dashboard-ready task models.",
+    impact:
+      "Reduced manual effort by 90%, improved reporting accuracy by 85%, and supported alerting that increased task closure rate by 30%.",
+    stack: ["Python", "SQL", "Pentaho PDI", "Microsoft Graph API", "Office 365 APIs", "Power BI"],
+    features: ["Planner/To-Do/OneDrive extraction", "Overdue-task alerts", "Operational KPI model"],
+    image: projectVisual("Microsoft Graph API enterprise task data ETL pipeline, Planner To Do OneDrive Excel Power BI dashboard"),
+  },
+  {
+    slug: "global-source-ingestion",
+    highlight: true,
+    title: "Azure/Python ingestion from 160+ global sources",
+    repoUrl: "",
+    summary:
+      "Python and Azure VM ingestion workflows extracting structured data from 160+ global web sources, with Azure Blob batch storage, validation, and error handling.",
+    problem:
+      "Global source coverage does not scale when extraction, validation, and retry handling depend on manual refresh work.",
+    solution:
+      "Designed scalable ingestion jobs and Azure batch storage patterns with structured extraction, validation, and production-oriented error handling.",
+    impact:
+      "Reduced manual intervention by 95%, supported 95% pipeline uptime, and created a reusable pattern for high-volume global data acquisition.",
+    stack: ["Python", "Azure VMs", "Azure Blob", "Azure Data Factory", "ETL", "Monitoring"],
+    features: ["160+ source coverage", "Validation and error handling", "Batch ingestion reliability"],
+    image: projectVisual("global web source ingestion data pipeline, Azure VM Python extraction, blob storage monitoring dashboard"),
+  },
+  {
+    slug: "binance-futures-bot",
+    highlight: false,
     title: "Binance USDT-M futures testnet trading bot",
     repoUrl: `${GITHUB_USER}/binance-futures-testnet-trading-bot`,
     summary:
@@ -393,8 +479,8 @@ export const PROJECTS = [
 /** Narrative for Experience page hero */
 export const EXPERIENCE_HEADLINE = {
   narrative:
-    "I work like a hybrid technical IC: data science where prediction matters, Python automation where operations need reliability, and Power Platform where business users need fast, governed tools. Recent focus: digital transformation at Jay Switches and large-scale automation/data engineering at AiToXr.",
-  tenureSummary: "AI/ML, automation, and data roles across industry and internships; SLIET Longowal graduate.",
+    "I work like a hybrid technical IC: data engineering where pipelines need reliability, data science where prediction matters, Python automation where operations need scale, and Power Platform where business users need governed tools. Recent focus: task-data ETL at Jay Switches and large-scale Azure/Python ingestion at AiToXr.",
+  tenureSummary: "2+ years across Data Engineering, AI/ML, automation, and analytics roles; SLIET Longowal graduate based in Gurgaon, Delhi NCR.",
 };
 
 /** Reverse-chronological roles */
@@ -402,42 +488,40 @@ export const EXPERIENCE_POSITIONS = [
   {
     id: "jay-switches",
     org: "Jay Switches India (P) Limited",
-    role: "Digital Transformation Specialist",
+    role: "Data Engineer",
     location: "Gurugram, Haryana, India",
     period: "Feb 2025 – Present",
     current: true,
     highlights: [
-      "Database & data management: designed and optimized SQL data stores; faster queries and more trustworthy reporting.",
-      "Process automation in Python: large cuts to manual processing time (~60%) and stronger operational efficiency.",
-      "Microsoft stack: Power BI, Power Automate, and Power Apps to strip ~70% manual effort from targeted workflows.",
-      "Transformation programs for production monitoring, inventory, and customer communication—higher accuracy and throughput.",
-      "IT support & hygiene on Microsoft apps: stable operations with security-conscious practice.",
+      "Built end-to-end ETL pipelines using Python, SQL, Pentaho PDI, and Microsoft Graph API to extract and consolidate task data from Planner, To-Do, OneDrive, and Excel systems for 200+ employees.",
+      "Developed scheduled batch workflows with logging, validation, API integrations, and dashboard-ready task models for operational reporting.",
+      "Implemented automated alerting and monitoring for overdue tasks so pipeline outputs became action-oriented, not just reporting artifacts.",
+      "Worked across Microsoft stack delivery: Power BI, Power Automate, Power Apps, SharePoint/M365 workflows, and SQL-backed reporting.",
     ],
     impact: [
-      "~80% less manual intervention in reporting and analytics.",
-      "~50% faster data retrieval via optimized SQL paths.",
-      "~30% operational cost reduction from automated processes.",
+      "Reduced manual task-reporting effort by 90%.",
+      "Improved reporting accuracy by 85% through validation and automated consolidation.",
+      "Increased task closure rate by 30% through overdue-task monitoring and alerts.",
     ],
-    tools: ["SQL", "Python", "Power BI", "Power Automate", "Power Apps", "Microsoft Azure"],
+    tools: ["Python", "SQL", "Pentaho PDI", "Microsoft Graph API", "Office 365 APIs", "Power BI", "Power Platform"],
   },
   {
     id: "aitoxr-auto",
     org: "AiToXr",
-    role: "Python Automation Developer",
+    role: "Data Engineer",
     location: "Chandigarh, India",
-    period: "Jan 2024 – Jan 2025",
+    period: "Jul 2023 – Jan 2025",
     current: false,
     highlights: [
-      "Python data-refresh automation on Azure: ~90–95% reduction in manual refresh work with higher accuracy.",
-      "Azure Blob and containers for large-scale storage/retrieval patterns.",
-      "ETL with Python and Azure Data Factory for high-volume ingestion and transformation.",
-      "Scraping/automation covering 160+ country sites with regulatory and compliance constraints.",
-      "ML hooks where predictions could tighten workflow automation.",
+      "Designed scalable data ingestion pipelines using Python and Azure VMs to extract structured data from 160+ global web sources.",
+      "Built automated ETL pipelines using Azure Data Factory and Azure Blob Storage for batch data processing.",
+      "Led a team of 3 to develop a production-grade data pipeline system with validation, error-handling, and operational reliability mechanisms.",
+      "Used Azure Blob, containers, Azure VMs, Data Factory, SQL, and Python ETL patterns for high-volume acquisition and transformation.",
     ],
     impact: [
-      "Massive manual workload reduction (90–95% band on owned pipelines).",
-      "Stronger global data accuracy and compliance posture.",
-      "More efficient operations via AI-assisted automation.",
+      "Reduced manual intervention by 95% through automated Azure/Python pipelines.",
+      "Supported 95% uptime for production-grade data pipeline workflows.",
+      "Improved global data coverage and reliability across 160+ source sites.",
     ],
     tools: ["Python", "SQL", "Azure Blob", "Containers", "Azure VMs", "Data Factory", "ETL", "ML integration"],
   },
@@ -509,16 +593,20 @@ export const EXPERIENCE_POSITIONS = [
   {
     id: "dataknobs",
     org: "DataKnobs",
-    role: "Data Science Intern",
+    role: "Data Engineer Intern",
     location: "United States (remote)",
     period: "Apr 2023 – Jun 2023",
     current: false,
     highlights: [
-      "Exposure to responsible generative-AI practices and governed outputs.",
-      "Mindset: high-quality datasets as the lever for predictive power.",
+      "Developed a Python-based extraction pipeline using BeautifulSoup and Requests to process 100,000+ real-estate records.",
+      "Performed data cleaning, transformation, structuring, validation, and preprocessing to prepare datasets for analytics and reporting.",
+      "Applied data-quality thinking from responsible AI/data workflows: better datasets become the lever for better downstream outcomes.",
     ],
-    impact: [],
-    tools: ["Generative AI governance", "Data quality"],
+    impact: [
+      "Improved data accuracy to 88% through validation and preprocessing.",
+      "Contributed to a $5,000 revenue impact narrative from structured real-estate data acquisition.",
+    ],
+    tools: ["Python", "BeautifulSoup", "Requests", "Data cleaning", "Validation", "Analytics datasets"],
   },
   {
     id: "internpe",
@@ -555,6 +643,25 @@ export const EXPERIENCE_POSITIONS = [
 export const SKILLS_ALL = [
   "Python",
   "SQL",
+  "PySpark",
+  "Spark SQL",
+  "Apache Spark",
+  "Databricks",
+  "Delta Lake",
+  "Apache Airflow",
+  "ETL/ELT pipelines",
+  "Batch processing",
+  "Incremental loading",
+  "CDC",
+  "SCD Type 2",
+  "Medallion Architecture",
+  "Idempotent pipelines",
+  "Data validation",
+  "Data modeling",
+  "SQL Server",
+  "Azure SQL Database",
+  "Snowflake",
+  "MongoDB",
   "TensorFlow",
   "PyTorch",
   "Scikit-learn",
@@ -564,33 +671,40 @@ export const SKILLS_ALL = [
   "Power BI",
   "Power Automate",
   "Power Apps",
+  "Pentaho Data Integration",
   "Microsoft Graph API",
+  "Office 365 APIs",
   "Azure Data Factory",
   "Azure Blob",
+  "Azure Data Lake Storage",
   "Azure VMs",
   "Docker / containers",
-  "ETL",
+  "Shell/Bash basics",
   "Git",
+  "VS Code",
+  "Jira",
   "Logging & observability",
   "GenAI governance",
 ];
 
 export const ABOUT = {
   summary:
-    "Data Scientist, Automation Developer, Power Platform Expert, and Python Developer focused on digital transformation. I turn raw operational data into cleaned datasets, reliable dashboards, workflow automations, and AI-assisted systems that improve how businesses run.",
+    "Data Engineer, Data Scientist, AI/ML Automation Engineer, and Power Platform Expert focused on digital transformation. I turn raw operational data into cleaned datasets, reliable pipelines, dashboard-ready models, workflow automations, and AI-assisted systems that improve how businesses run.",
   vision:
-    "Whether I am building a Python pipeline, optimizing SQL, shipping a Power App, automating SharePoint with Graph API, or training an ML model, I connect technical delivery to business outcomes: less manual work, faster reporting, cleaner data, and systems people can adopt.",
+    "Whether I am building a Python/PySpark pipeline, designing Medallion layers, optimizing SQL, shipping a Power App, automating Microsoft 365 with Graph API, or training an ML model, I connect technical delivery to business outcomes: less manual work, faster reporting, cleaner data, and systems people can adopt.",
   missionBullets: [
-    "Python automation — scheduled jobs, data refresh, scraping, validation, logging, reporting, and handover-ready scripts.",
+    "Data engineering — ETL/ELT pipelines, PySpark, Spark SQL, Delta Lake, Airflow, Azure Data Factory, Blob/ADLS, batch processing, validation, and monitoring.",
+    "Warehouse concepts — Medallion Architecture, CDC, SCD Type 2, incremental loading, idempotent pipelines, SQL modeling, and reporting-ready serving layers.",
+    "Python automation — scheduled jobs, API extraction, data refresh, scraping, validation, logging, reporting, and handover-ready scripts.",
     "Power Platform — Power Apps, Power Automate, Power BI, approvals, forms, workflow digitization, and low-code business tools.",
     "Microsoft 365 automation — Graph API, SharePoint lists/libraries, email workflows, user/process data, and governed collaboration systems.",
-    "Data science & analytics — cleaning, preprocessing, SQL, dashboards, NLP, ML prototypes, and stakeholder-ready insight stories.",
+    "Data science & analytics — cleaning, preprocessing, SQL, dashboards, NLP, ML prototypes, RAG, and stakeholder-ready insight stories.",
   ],
   achievementsHighlight: [
     "Zomato-style NLP rating model (public repo: ~85% on 20K+ reviews per README) with sentiment-ready storytelling.",
     "Real-estate automation for 100K+ listings contributing to $5K+ revenue narrative.",
-    "HR analytics dashboards tied to ~72% absenteeism reduction and ~85% productivity lift in the program window.",
-    "Azure-hosted pipelines replacing manual workflows—up to ~96% reduction in repetitive work on owned processes.",
+    "Microsoft Graph API task-data ETL for 200+ employees, reducing manual effort by 90% and improving reporting accuracy by 85%.",
+    "Azure/Python ingestion across 160+ global sources with 95% manual intervention reduction and 95% uptime.",
   ],
   journey: [
     {
@@ -630,19 +744,27 @@ export const ABOUT = {
 export const EDUCATION = [
   {
     school: "Sant Longowal Institute of Engineering & Technology (SLIET)",
-    degree: "Bachelor's · Electrical & Electronics Engineering",
-    period: "Sep 2021 – May 2024",
+    degree: "Bachelor of Engineering · Electrical Engineering",
+    period: "Jul 2021 – May 2024",
     note: "Student Placement Representative (May 2022 – May 2024).",
   },
   {
     school: "Sant Longowal Institute of Engineering & Technology (SLIET)",
     degree: "Diploma · Electrical Engineering",
-    period: "2018 – 2021",
+    period: "Jul 2018 – May 2021",
     note: "",
+  },
+  {
+    school: "Resonance International School",
+    degree: "Matriculation",
+    period: "Mar 2017 – Mar 2018",
+    note: "Muzaffarpur, Bihar.",
   },
 ];
 
 export const CERTIFICATIONS = [
+  "AI-900: Microsoft Azure AI Fundamentals — Microsoft",
+  "Beginner to Advanced MLOps on GCP (CI/CD, Jenkins, Kubernetes) — Udemy",
   "Web Design Strategy and Information Architecture",
   "Google Advanced Data Analytics Capstone",
   "Read Text in Images and Documents with Azure AI Vision",

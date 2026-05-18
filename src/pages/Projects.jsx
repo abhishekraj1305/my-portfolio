@@ -20,7 +20,7 @@ export function Projects() {
               as="h1"
               lead={
                 <>
-                  Strongest work first: automation, AI, analytics, OCR, scraping, and data products with role, workflow, impact, and proof. Full source history remains on{" "}
+                  Strongest work first: data engineering, warehousing, automation, AI, analytics, OCR, scraping, and data products with role, workflow, impact, and proof. Full source history remains on{" "}
               <a href={`${GITHUB_USER}?tab=repositories`} className="inline-repo-link" target="_blank" rel="noreferrer">
                 github.com/abhishekraj1305
               </a>
@@ -38,9 +38,9 @@ export function Projects() {
             <div className="projects-lab-panel">
               <div>
                 <div className="section-kicker">Systems lab</div>
-                <h2 className="section-title">Technical proof with honest constraints</h2>
+                <h2 className="section-title">Pipeline proof with honest constraints</h2>
                 <p className="section-lead max-720">
-                  Recruiters should see what was built, what role I played, what evidence exists, and which claims need interview context.
+                  Recruiters should see what was built, which layer it belongs to, what I owned, what impact it had, and which claims need interview context.
                 </p>
               </div>
               <AiVisual variant="core" label="AI project systems core" />

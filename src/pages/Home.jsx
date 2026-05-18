@@ -9,7 +9,7 @@ import { SkillBadge } from "../components/SkillBadge";
 import { StatCard } from "../components/StatCard";
 import { ProjectCard } from "../components/ProjectCard";
 import { SITE, HOME_INTRO } from "../data/profile";
-import { SKILLS_PREVIEW, CAPABILITIES, SYSTEM_HIGHLIGHTS } from "../data/skills";
+import { SKILLS_PREVIEW, CAPABILITIES, SYSTEM_HIGHLIGHTS, ROLE_TRACKS } from "../data/skills";
 import { HERO_STATS } from "../data/stats";
 import { FEATURED_PROJECTS } from "../data/projects";
 import { EXPERIENCE_POSITIONS } from "../data/experience";
@@ -29,12 +29,12 @@ export function Home() {
           <div className="hero-grid">
             <div className="hero-copy">
               <Reveal>
-                <p className="eyebrow">Data systems · Automation · Power Platform</p>
+                <p className="eyebrow">Data engineering · Data science · Automation</p>
               </Reveal>
               <Reveal delay={0.06}>
                 <h1 className="hero-title">
                   <span>{SITE.name}</span>
-                  <span className="hero-title-sub">AI/ML Automation Engineer</span>
+                  <span className="hero-title-sub">Data Engineer + AI/ML Automation</span>
                 </h1>
               </Reveal>
               <Reveal delay={0.12}>
@@ -44,9 +44,9 @@ export function Home() {
               <Reveal delay={0.15}>
                 <div className="hero-badges" aria-label="Core roles">
                   <span>Data Scientist</span>
+                  <span>Data Engineer</span>
                   <span>Python Automation</span>
                   <span>Power Platform</span>
-                  <span>Digital Transformation</span>
                 </div>
               </Reveal>
               <Reveal delay={0.18}>
@@ -85,6 +85,7 @@ export function Home() {
                 <div className="hero-terminal" aria-label="Technical focus">
                   <span className="terminal-dot" />
                   <code>python + sql + power_platform + graph_api</code>
+                  <code>pyspark + adf + delta_lake + airflow</code>
                   <strong>{currentRole?.role || "Digital Transformation Specialist"}</strong>
                   <small>{currentRole?.org || "Enterprise automation"}</small>
                 </div>
@@ -104,13 +105,39 @@ export function Home() {
         </Container>
       </Section>
 
+      <Section className="section-tight-top">
+        <Container>
+          <Reveal>
+            <SectionHeader
+              eyebrow="Recruiter tracks"
+              title="One profile, four hiring angles"
+              lead="The portfolio is organized so hiring teams can quickly map my work to data engineering, data science, automation, and Power Platform delivery."
+            />
+          </Reveal>
+          <RevealStagger className="capability-grid">
+            {ROLE_TRACKS.map((track) => (
+              <motion.article key={track.title} className="capability-card glass-card" variants={itemFade}>
+                <span className="card-orbit" aria-hidden />
+                <h3>{track.title}</h3>
+                <p>{track.body}</p>
+                <div className="chip-row capability-tags">
+                  {track.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </motion.article>
+            ))}
+          </RevealStagger>
+        </Container>
+      </Section>
+
       <Section>
         <Container>
           <div className="ai-section-grid">
             <Reveal>
               <div>
                 <div className="section-kicker">Recruiter signal</div>
-                <h2 className="section-title">AIML engineering meets enterprise automation</h2>
+                <h2 className="section-title">Data engineering meets AI/ML automation</h2>
                 <p className="section-lead max-800">{HOME_INTRO.short}</p>
               </div>
             </Reveal>

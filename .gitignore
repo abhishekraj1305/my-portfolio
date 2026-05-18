@@ -22,3 +22,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# chatbot runtime/private artifacts
+chatbot/runtime_data/
+chatbot/vector_db/
+chatbot/.env
+chatbot/.env.local
+chatbot/data/bookings.json
+chatbot/data/booking_notifications.log
+chatbot/data/github_repos_cache.json
+chatbot/data/test_bookings.tmp.json

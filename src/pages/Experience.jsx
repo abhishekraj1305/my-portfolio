@@ -14,7 +14,7 @@ export function Experience() {
         <Container>
           <Reveal>
             <p className="eyebrow">Experience</p>
-            <h1 className="page-title">Enterprise impact across data, automation, and transformation</h1>
+            <h1 className="page-title">Enterprise impact across pipelines, analytics, automation, and transformation</h1>
             <p className="page-lead max-800">{EXPERIENCE_HEADLINE.narrative}</p>
             <p className="page-note max-800">{EXPERIENCE_HEADLINE.tenureSummary}</p>
           </Reveal>
@@ -27,9 +27,9 @@ export function Experience() {
             <div className="experience-command">
               <div>
                 <div className="section-kicker">Command layer</div>
-                <h2 className="section-title">Automation impact timeline</h2>
+                <h2 className="section-title">Data and automation impact timeline</h2>
                 <p className="section-lead max-720">
-                  Roles below show where AI, Python, SQL, Power Platform, Azure, and business process digitization were applied.
+                  Roles below show where Python, SQL, Azure, APIs, Power Platform, AI, and business process digitization were applied.
                 </p>
               </div>
               <AiVisual variant="robot" label="AI automation operator" />

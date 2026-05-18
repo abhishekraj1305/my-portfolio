@@ -1,6 +1,34 @@
 import { PROJECTS as LEGACY_PROJECTS } from "./siteContent";
 
 const proofBySlug = {
+  "medallion-pyspark-pipeline": {
+    role: "Designed the warehouse-style pipeline structure, PySpark transformations, incremental loading pattern, SCD Type 2 history handling, validation checks, and Airflow orchestration story.",
+    workflow:
+      "Raw source data lands in Bronze, cleaned and standardized records move through Silver, and analytics-ready Gold outputs preserve history with SCD Type 2 logic and quality logs.",
+    proof: "Portfolio proof: architecture and implementation narrative based on the new Data Engineer profile; repository link should point to public code when published.",
+    learned: "A data pipeline becomes credible when it explains storage layers, change capture, repeatability, validation, and failure handling.",
+  },
+  "azure-batch-data-pipeline": {
+    role: "Designed the Azure batch ingestion, transformation, validation, and serving workflow for structured reporting data.",
+    workflow:
+      "Azure Data Factory orchestrates batch movement into Blob/ADLS, SQL Server handles structured transformations, and validated outputs feed reporting and Power BI-style consumption.",
+    proof: "Portfolio proof: Azure Data Factory, Blob/ADLS, SQL Server, batch scheduling, and validation pattern from the Data Engineer profile.",
+    learned: "For enterprise reporting, reliability and auditability matter as much as the dashboard users eventually see.",
+  },
+  "graph-task-data-etl": {
+    role: "Built the Python, SQL, PDI, and Microsoft Graph API workflow that extracted and consolidated task data from Microsoft 365 systems for operational reporting.",
+    workflow:
+      "Scheduled jobs pull Planner, To-Do, OneDrive, and Excel data through Graph/Office APIs, validate and consolidate it, then expose task and overdue-status metrics for dashboards.",
+    proof: "Experience proof: Jay Switches workflow for 200+ employees; reported impact includes 90% manual effort reduction, 85% reporting accuracy improvement, and 30% better task closure.",
+    learned: "Operational data engineering succeeds when API integration, validation, alerting, and business adoption are designed together.",
+  },
+  "global-source-ingestion": {
+    role: "Designed and led ingestion workflows for high-volume global source extraction using Python and Azure infrastructure.",
+    workflow:
+      "Python extraction jobs on Azure VMs collect structured data from 160+ global sources, land batches in Azure Blob, and use validation/error handling before downstream processing.",
+    proof: "Experience proof: AiToXr pipeline work; reported impact includes 160+ sources, 95% manual intervention reduction, and 95% uptime.",
+    learned: "High-volume extraction needs source-specific resilience, observability, and clean handoff into storage layers.",
+  },
   "binance-futures-bot": {
     role: "Built the Python order-flow toolkit, Streamlit inspection UI, validation surface, logging approach, and testnet-first safety framing.",
     workflow:
